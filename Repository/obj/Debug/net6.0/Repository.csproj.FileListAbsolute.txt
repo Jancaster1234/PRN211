@@ -1,0 +1,17 @@
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\bin\Debug\net6.0\Repository.deps.json
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\bin\Debug\net6.0\Repository.dll
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\bin\Debug\net6.0\Repository.pdb
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\bin\Debug\net6.0\BusinessObject.dll
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\bin\Debug\net6.0\DataAccess.dll
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\bin\Debug\net6.0\DataAccess.pdb
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\bin\Debug\net6.0\BusinessObject.pdb
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\Repository.csproj.AssemblyReference.cache
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\Repository.AssemblyInfoInputs.cache
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\Repository.AssemblyInfo.cs
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\Repository.csproj.CoreCompileInputs.cache
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\Repository.csproj.CopyComplete
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\Repository.dll
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\refint\Repository.dll
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\Repository.pdb
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\ref\Repository.dll
