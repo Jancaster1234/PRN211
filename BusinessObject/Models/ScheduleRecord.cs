@@ -26,4 +26,18 @@ public partial class ScheduleRecord
     public int? TeacherId { get; set; }
 
     public virtual User? Teacher { get; set; }
+
+    public ScheduleRecord(int id, string? location, string? room, string? className, string? courseName, DateTime? date, TimeSpan? startTime, TimeSpan? endTime, DateTime? createdDate, int? teacherId)
+    {
+        Id = id;
+        Location = location;
+        Room = room;
+        ClassName = className;
+        CourseName = courseName;
+        Date = date;
+        StartTime = startTime;
+        EndTime = endTime;
+        CreatedDate = createdDate;
+        TeacherId = teacherId;
+    }
 }

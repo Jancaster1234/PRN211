@@ -1,10 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
-    <Compile Update="frmMain.cs">
+    <Compile Update="frmStudentActionRecordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmTeacherSchedule.cs">
+    <Compile Update="frmStudentMeetingRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStudentPasscodeRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStudentProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStudentTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStudent_SlotForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

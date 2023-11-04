@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using BusinessObject.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace DataAccess;
+namespace BusinessObject.Models;
 
 public partial class FptuPrn211MeetMyLecturerContext : DbContext
 {
@@ -34,6 +33,7 @@ public partial class FptuPrn211MeetMyLecturerContext : DbContext
     public virtual DbSet<Subject> Subjects { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
+
     private string GetConnectionString()
     {
         IConfiguration configuration = new ConfigurationBuilder()
@@ -267,6 +267,10 @@ public partial class FptuPrn211MeetMyLecturerContext : DbContext
             entity.Property(e => e.Email)
                 .HasMaxLength(255)
                 .HasColumnName("email");
+            entity.Property(e => e.HideInfo)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("hideInfo");
             entity.Property(e => e.Image)
                 .HasMaxLength(255)
                 .HasColumnName("image");
