@@ -56,7 +56,6 @@ D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\bin\Debug\net6.0-window
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\bin\Debug\net6.0-windows\BusinessObject.pdb
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\bin\Debug\net6.0-windows\DataAccess.pdb
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.csproj.AssemblyReference.cache
-D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Form1.resources
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.csproj.GenerateResource.cache
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.GeneratedMSBuildEditorConfig.editorconfig
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.AssemblyInfoInputs.cache
@@ -68,3 +67,11 @@ D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-window
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.pdb
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.genruntimeconfig.cache
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\ref\MeetMyLecturerWinApp.dll
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmMain.resources
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Properties.Resources.resources
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmStudentActionRecordForm.resources
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmStudentMeetingRequestForm.resources
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmStudentPasscodeRequestForm.resources
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmStudentProfile.resources
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmStudentTeacherForm.resources
+D:\Demo\FU\PRN211_G8_MeetMyLecturer\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmStudent_SlotForm.resources

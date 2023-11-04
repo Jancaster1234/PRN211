@@ -4,5 +4,23 @@
     <Compile Update="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmStudentActionRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStudentMeetingRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStudentPasscodeRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStudentProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStudentTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmStudent_SlotForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
