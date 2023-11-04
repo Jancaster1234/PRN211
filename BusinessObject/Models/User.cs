@@ -29,6 +29,8 @@ public partial class User
 
     public int? Role { get; set; }
 
+    public string? HideInfo { get; set; }
+
     public virtual ICollection<ActionRecord> ActionRecords { get; set; } = new List<ActionRecord>();
 
     public virtual ICollection<MeetingRequest> MeetingRequestStudents { get; set; } = new List<MeetingRequest>();
