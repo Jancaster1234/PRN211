@@ -11,5 +11,11 @@ namespace Repository
         void AddScheduleRecord(ScheduleRecord scheduleRecord);
         void UpdateScheduleRecord(ScheduleRecord scheduleRecord);
         void DeleteScheduleRecord(ScheduleRecord scheduleRecord);
+
+        ScheduleRecord checkExist(string room, TimeSpan start, DateTime date);
+
+        public void DeleteScheduleRecordByTeacherId(int teacherId);
+
+        ScheduleRecord GetScheduleRecordByTimeAndDate(TimeSpan start, string date);
     }
 }

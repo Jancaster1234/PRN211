@@ -31,5 +31,19 @@ namespace Repository
         {
             ScheduleRecordDAO.Instance.DeleteScheduleRecord(scheduleRecord);
         }
+
+        public void DeleteScheduleRecordByTeacherId(int teacherId)
+        {
+            ScheduleRecordDAO.Instance.DeleteScheduleRecordsByTeacherId(teacherId);
+        }
+        ScheduleRecord IScheduleRecordRepository.GetScheduleRecordByTimeAndDate(TimeSpan start, string date)
+        {
+            return ScheduleRecordDAO.Instance.GetScheduleRecordByTimeAndDate(start, date);
+        }
+
+        ScheduleRecord IScheduleRecordRepository.checkExist(string room, TimeSpan start, DateTime date)
+        {
+            return ScheduleRecordDAO.Instance.checkExist(room, start, date);    
+        }
     }
 }

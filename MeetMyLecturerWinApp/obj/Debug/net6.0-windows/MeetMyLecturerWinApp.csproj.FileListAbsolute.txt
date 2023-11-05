@@ -156,3 +156,4 @@ C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\MeetMyLectu
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\MeetMyLecturerWinApp\bin\Debug\net6.0-windows\ExcelDataReader.dll
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\MeetMyLecturerWinApp\bin\Debug\net6.0-windows\ExcelDataReader.DataSet.dll
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\MeetMyLecturerWinApp\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmScheduleItem.resources

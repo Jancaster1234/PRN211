@@ -28,84 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            btnImport = new Button();
-            btnSave = new Button();
-            txtFilePath = new TextBox();
+            flowPanel_items = new FlowLayoutPanel();
+            panel_header = new Panel();
+            btnForward = new Button();
+            btnBack = new Button();
             btnBrowse = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtFilePath = new TextBox();
+            btnSave = new Button();
+            panel_header.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // flowPanel_items
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 109);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(452, 304);
-            dataGridView1.TabIndex = 0;
+            flowPanel_items.Location = new Point(0, 89);
+            flowPanel_items.Name = "flowPanel_items";
+            flowPanel_items.Size = new Size(723, 426);
+            flowPanel_items.TabIndex = 6;
+            flowPanel_items.Paint += flowPanel_items_Paint;
             // 
-            // btnImport
+            // panel_header
             // 
-            btnImport.Location = new Point(28, 12);
-            btnImport.Name = "btnImport";
-            btnImport.Size = new Size(75, 23);
-            btnImport.TabIndex = 1;
-            btnImport.Text = "Import";
-            btnImport.UseVisualStyleBackColor = true;
-            btnImport.Click += btnImport_Click;
+            panel_header.Controls.Add(btnForward);
+            panel_header.Controls.Add(btnBack);
+            panel_header.Controls.Add(btnBrowse);
+            panel_header.Controls.Add(txtFilePath);
+            panel_header.Controls.Add(btnSave);
+            panel_header.Dock = DockStyle.Top;
+            panel_header.Location = new Point(0, 0);
+            panel_header.Name = "panel_header";
+            panel_header.Size = new Size(723, 86);
+            panel_header.TabIndex = 7;
+            panel_header.Paint += panel_header_Paint;
             // 
-            // btnSave
+            // btnForward
             // 
-            btnSave.Location = new Point(28, 41);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(75, 23);
-            btnSave.TabIndex = 2;
-            btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;
+            btnForward.Location = new Point(682, 53);
+            btnForward.Name = "btnForward";
+            btnForward.Size = new Size(29, 30);
+            btnForward.TabIndex = 10;
+            btnForward.Text = ">";
+            btnForward.UseVisualStyleBackColor = true;
+            btnForward.Click += btnForward_Click;
             // 
-            // txtFilePath
+            // btnBack
             // 
-            txtFilePath.Location = new Point(109, 13);
-            txtFilePath.Name = "txtFilePath";
-            txtFilePath.ReadOnly = true;
-            txtFilePath.Size = new Size(306, 23);
-            txtFilePath.TabIndex = 4;
+            btnBack.Location = new Point(647, 53);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(29, 30);
+            btnBack.TabIndex = 9;
+            btnBack.Text = "<";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // btnBrowse
             // 
-            btnBrowse.Location = new Point(432, 13);
+            btnBrowse.Location = new Point(441, 12);
             btnBrowse.Name = "btnBrowse";
             btnBrowse.Size = new Size(32, 23);
-            btnBrowse.TabIndex = 5;
+            btnBrowse.TabIndex = 8;
             btnBrowse.Text = "...";
             btnBrowse.UseVisualStyleBackColor = true;
             btnBrowse.Click += btnBrowse_Click;
+            // 
+            // txtFilePath
+            // 
+            txtFilePath.Location = new Point(24, 13);
+            txtFilePath.Name = "txtFilePath";
+            txtFilePath.ReadOnly = true;
+            txtFilePath.Size = new Size(411, 23);
+            txtFilePath.TabIndex = 7;
+            // 
+            // btnSave
+            // 
+            btnSave.Location = new Point(24, 42);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(75, 23);
+            btnSave.TabIndex = 6;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // frmTeacherSchedule
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(489, 435);
-            Controls.Add(btnBrowse);
-            Controls.Add(txtFilePath);
-            Controls.Add(btnSave);
-            Controls.Add(btnImport);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(723, 545);
+            Controls.Add(panel_header);
+            Controls.Add(flowPanel_items);
+            MdiChildrenMinimizedAnchorBottom = false;
             Name = "frmTeacherSchedule";
             Text = "frmTeacherSchedule";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += frmTeacherSchedule_Load;
+            panel_header.ResumeLayout(false);
+            panel_header.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
-        private Button btnImport;
-        private Button btnSave;
-        private TextBox txtFilePath;
+        private FlowLayoutPanel flowPanel_items;
+        private Panel panel_header;
         private Button btnBrowse;
+        private TextBox txtFilePath;
+        private Button btnSave;
+        private Button btnBack;
+        private Button btnForward;
     }
 }

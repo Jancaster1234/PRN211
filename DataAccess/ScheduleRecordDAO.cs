@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using BusinessObject.Models;
+using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 
 namespace DataAccess
 {
@@ -33,6 +34,21 @@ namespace DataAccess
             return db.ScheduleRecords.Find(scheduleRecordId);
         }
 
+        public ScheduleRecord GetScheduleRecordByTimeAndDate(TimeSpan start, string date)
+        {
+            using var db = new FptuPrn211MeetMyLecturerContext();
+            var records = db.ScheduleRecords.ToList();
+            var result = records.FirstOrDefault(sr => sr.StartTime.Equals(start) && sr.Date.HasValue && sr.Date.Value.DayOfWeek.ToString() == date);
+
+            return result;
+        }
+
+        public ScheduleRecord checkExist(string room, TimeSpan start, DateTime date)
+        {
+            using var db = new FptuPrn211MeetMyLecturerContext();
+            return db.ScheduleRecords.FirstOrDefault(sr => sr.Room.Equals(room) && sr.StartTime.Equals(start) && sr.Date.Equals(date));
+        }
+
         public List<ScheduleRecord> GetAllScheduleRecords()
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
@@ -57,6 +73,22 @@ namespace DataAccess
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
             db.ScheduleRecords.Remove(scheduleRecord);
+            db.SaveChanges();
+        }
+
+        public void DeleteScheduleRecordsByTeacherId(int teacherId)
+        {
+            using var db = new FptuPrn211MeetMyLecturerContext();
+
+            // Retrieve all schedule records with teacherId = 1
+            var scheduleRecords = db.ScheduleRecords.Where(record => record.TeacherId == teacherId).ToList();
+
+            // Remove each schedule record
+            foreach (var scheduleRecord in scheduleRecords)
+            {
+                db.ScheduleRecords.Remove(scheduleRecord);
+            }
+
             db.SaveChanges();
         }
     }
