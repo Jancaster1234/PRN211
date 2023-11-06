@@ -36,9 +36,9 @@ namespace Repository
         {
             ScheduleRecordDAO.Instance.DeleteScheduleRecordsByTeacherId(teacherId);
         }
-        ScheduleRecord IScheduleRecordRepository.GetScheduleRecordByTimeAndDate(TimeSpan start, string date)
+        ScheduleRecord IScheduleRecordRepository.GetScheduleRecordByTimeAndDate(TimeSpan start, string dateWeek, int week, int teacherID)
         {
-            return ScheduleRecordDAO.Instance.GetScheduleRecordByTimeAndDate(start, date);
+            return ScheduleRecordDAO.Instance.GetScheduleRecordByTimeAndDate(start, dateWeek, week,teacherID);
         }
 
         ScheduleRecord IScheduleRecordRepository.checkExist(string room, TimeSpan start, DateTime date)

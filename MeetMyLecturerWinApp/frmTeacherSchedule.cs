@@ -19,16 +19,13 @@ namespace MeetMyLecturerWinApp
         DataTableCollection tableCollection;
         IScheduleRecordRepository scheduleRecordRepository = new ScheduleRecordRepository();
         int page = 0;
+        DateTime startDate = DateTime.Now;
+        int teacherId = 1;
+
         public frmTeacherSchedule()
         {
             InitializeComponent();
         }
-
-        private void btnImport_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             try
@@ -67,17 +64,22 @@ namespace MeetMyLecturerWinApp
         {
             try
             {
+                flowPanel_items.Controls.Clear();
                 string room, className;
                 int slot = 0;
                 string[] dayOfWeek = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
                 string[] startTime = new string[] { "16:00:00", "14:15:00", "12:30:00", "10:30:00", "8:45:00", "7:00:00" };
                 flowPanel_items.FlowDirection = FlowDirection.LeftToRight;
+                lbDateWeek.Text = startDate.AddDays(page * 7).ToString("dd/MM/yyyy") + " - "
+                    + startDate.AddDays(page * 7 + 6).ToString("dd/MM/yyyy");
                 for (int i = 41; i >= 0; i--)
                 {
                     if (i % 7 == 6)
+                    {
                         slot += 1;
+                    }
                     ScheduleRecord scheduleRecord = scheduleRecordRepository
-                    .GetScheduleRecordByTimeAndDate(TimeSpan.Parse(startTime[slot - 1]), dayOfWeek[i % 7]);
+                    .GetScheduleRecordByTimeAndDate(TimeSpan.Parse(startTime[slot - 1]), dayOfWeek[i % 7], page, teacherId);
                     if (scheduleRecord != null)
                     {
                         room = scheduleRecord.Room;
@@ -115,7 +117,6 @@ namespace MeetMyLecturerWinApp
                 string className;
                 string dateStr = "";
                 string courseName = "";
-                int teacherId = 1;
                 scheduleRecordRepository.DeleteScheduleRecordByTeacherId(teacherId);
                 DataTable ds = tableCollection["Sheet1"];
                 foreach (DataRow row in ds.Rows)
@@ -127,6 +128,10 @@ namespace MeetMyLecturerWinApp
                     if (count == 1)
                     {
                         courseName = row["Course Name"].ToString();
+                        startDate = DateTime.Parse(row["Day"].ToString());
+                        DateTime now = DateTime.Now;
+                        TimeSpan timeDifferent = (now - startDate);
+                        page = timeDifferent.Days / 7;
                     }
                     if ((count - 1) % 6 == 0)
                     {
@@ -158,7 +163,7 @@ namespace MeetMyLecturerWinApp
 
                         // Add the ScheduleRecord to the list
                         scheduleRecordRepository.AddScheduleRecord(sr);
-                        
+
                     }
                 }
                 MessageBox.Show("Saved to database");
@@ -174,25 +179,26 @@ namespace MeetMyLecturerWinApp
 
         private void frmTeacherSchedule_Load(object sender, EventArgs e)
         {
-
+            loadSchedule();
         }
 
-        private void flowPanel_items_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel_header_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            if (page > 0)
+            {
+                page -= 1;
+                loadSchedule();
+            }
         }
 
         private void btnForward_Click(object sender, EventArgs e)
+        {
+            page += 1;
+            loadSchedule();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }

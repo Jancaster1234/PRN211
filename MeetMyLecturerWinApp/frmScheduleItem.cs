@@ -27,5 +27,6 @@ namespace MeetMyLecturerWinApp
             lbClass.Text = className;
             lbRoom.Text = room;
         }
+
     }
 }

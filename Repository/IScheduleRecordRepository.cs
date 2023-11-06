@@ -16,6 +16,6 @@ namespace Repository
 
         public void DeleteScheduleRecordByTeacherId(int teacherId);
 
-        ScheduleRecord GetScheduleRecordByTimeAndDate(TimeSpan start, string date);
+        ScheduleRecord GetScheduleRecordByTimeAndDate(TimeSpan start, string dateWeek, int week, int teacherId);
     }
 }
