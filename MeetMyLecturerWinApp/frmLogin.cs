@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MeetMyLecturerWinApp
 {
-    public partial class frmStudentActionRecordForm : Form
+    public partial class frmLogin : Form
     {
-        public frmStudentActionRecordForm()
+        public frmLogin()
         {
             InitializeComponent();
         }

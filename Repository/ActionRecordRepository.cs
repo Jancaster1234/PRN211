@@ -31,5 +31,10 @@ namespace Repository
         {
             ActionRecordDAO.Instance.DeleteActionRecord(actionRecord);
         }
+
+        public List<ActionRecord> FilterActionRecords(int? userId)
+        {
+            return ActionRecordDAO.Instance.FilterActionRecords(userId);
+        }
     }
 }

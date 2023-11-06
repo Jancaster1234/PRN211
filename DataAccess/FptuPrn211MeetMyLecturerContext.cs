@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using BusinessObject.Models;
 using Microsoft.Extensions.Configuration;
 
-namespace BusinessObject.Models;
+namespace DataAccess;
 
 public partial class FptuPrn211MeetMyLecturerContext : DbContext
 {
@@ -46,7 +47,6 @@ public partial class FptuPrn211MeetMyLecturerContext : DbContext
     {
         optionsBuilder.UseSqlServer(GetConnectionString());
     }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ActionRecord>(entity =>
@@ -133,13 +133,11 @@ public partial class FptuPrn211MeetMyLecturerContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__role__3213E83F6919ADB0");
+            entity.HasKey(e => e.Id).HasName("PK__role__3213E83F62DE213A");
 
             entity.ToTable("role");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.RoleName)
                 .HasMaxLength(50)
                 .HasColumnName("roleName");

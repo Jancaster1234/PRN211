@@ -31,5 +31,11 @@ namespace Repository
         {
             MeetingRequestDAO.Instance.DeleteMeetingRequest(meetingRequest);
         }
+        
+        public List<MeetingRequest> FilterMeetingRequests(int? userId, int? teacherId, DateTime? startCreatedDate, DateTime? endCreatedDate, string? status, DateTime? startReviewedDate, DateTime? endReviewedDate, int? slotId)
+        {
+            return MeetingRequestDAO.Instance.FilterMeetingRequests(userId, teacherId, startCreatedDate, endCreatedDate, status, startReviewedDate, endReviewedDate, slotId);
+        }
     }
+
 }
