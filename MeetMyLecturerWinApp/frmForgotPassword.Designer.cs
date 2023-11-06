@@ -31,10 +31,8 @@
             pictureBox1 = new PictureBox();
             txtEmail = new TextBox();
             label1 = new Label();
-            label2 = new Label();
             GetPassBut = new Button();
             ExitBut = new Button();
-            result = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -66,16 +64,6 @@
             label1.TabIndex = 4;
             label1.Text = "Registered Email";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(55, 286);
-            label2.Name = "label2";
-            label2.Size = new Size(46, 19);
-            label2.TabIndex = 6;
-            label2.Text = "Result";
-            // 
             // GetPassBut
             // 
             GetPassBut.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
@@ -97,24 +85,14 @@
             ExitBut.UseVisualStyleBackColor = true;
             ExitBut.Click += ExitBut_Click;
             // 
-            // result
-            // 
-            result.AutoSize = true;
-            result.Location = new Point(170, 286);
-            result.Name = "result";
-            result.Size = new Size(0, 15);
-            result.TabIndex = 9;
-            // 
             // frmForgotPassword
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(444, 375);
-            Controls.Add(result);
             Controls.Add(ExitBut);
             Controls.Add(GetPassBut);
-            Controls.Add(label2);
             Controls.Add(txtEmail);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -130,9 +108,7 @@
         private PictureBox pictureBox1;
         private TextBox txtEmail;
         private Label label1;
-        private Label label2;
         private Button GetPassBut;
         private Button ExitBut;
-        private Label result;
     }
 }

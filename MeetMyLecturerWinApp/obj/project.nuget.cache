@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "TUWc4GtfZq/B8mpwWiG49zSHheuaoTJym4GLLfkXSs6zFxfRnR1yVxMOQQbeQNio3TA7jVniZyLAvMRWn1pWQA==",
+  "dgSpecHash": "zWZE1CQzXSfu33wHT4loxwA1BoZotkIOeicnRnmUBgXlgSaJikR1nGB2MdHilknfa2CH9ImxymKAPJu2jbT8Ow==",
   "success": true,
   "projectFilePath": "D:\\FPT\\PRN211\\GroupProject\\PRN211\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\fluentemail.core\\3.0.2\\fluentemail.core.3.0.2.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\fluentemail.smtp\\3.0.2\\fluentemail.smtp.3.0.2.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

@@ -156,3 +156,5 @@ D:\FPT\PRN211\GroupProject\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\
 D:\FPT\PRN211\GroupProject\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.pdb
 D:\FPT\PRN211\GroupProject\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.genruntimeconfig.cache
 D:\FPT\PRN211\GroupProject\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\ref\MeetMyLecturerWinApp.dll
+D:\FPT\PRN211\GroupProject\PRN211\MeetMyLecturerWinApp\bin\Debug\net6.0-windows\FluentEmail.Core.dll
+D:\FPT\PRN211\GroupProject\PRN211\MeetMyLecturerWinApp\bin\Debug\net6.0-windows\FluentEmail.Smtp.dll
