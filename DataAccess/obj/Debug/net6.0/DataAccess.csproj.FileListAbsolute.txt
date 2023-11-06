@@ -13,3 +13,18 @@ D:\Demo\FU\PRN211_G8_MeetMyLecturer\DataAccess\obj\Debug\net6.0\DataAccess.dll
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
