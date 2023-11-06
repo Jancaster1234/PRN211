@@ -15,6 +15,11 @@ namespace Repository
             return UserDAO.Instance.GetAllUsers();
         }
 
+        public List<User> FilterUsers(string? role, string? email, string? major, string? name)
+        {
+            return UserDAO.Instance.FilterUsers(role, email, major, name);
+        }
+
         public User GetUser(int id)
         {
             return UserDAO.Instance.GetUserById(id);
@@ -33,6 +38,10 @@ namespace Repository
         public void UpdateUser(User user)
         {
             UserDAO.Instance.UpdateUser(user);
+        }
+        public void UpdateUserImage(User user, string imageName)
+        {
+            UserDAO.Instance.UpdateUserImage(user, imageName);
         }
     }
 }

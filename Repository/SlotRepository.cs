@@ -31,5 +31,9 @@ namespace Repository
         {
             SlotDAO.Instance.DeleteSlot(slot);
         }
+        public List<Slot> FilterSlots(string? teacherEmail, string? subject, DateTime? startDate, DateTime? endDate)
+        {
+            return SlotDAO.Instance.FilterSlots(teacherEmail, subject, startDate, endDate);
+        }
     }
 }

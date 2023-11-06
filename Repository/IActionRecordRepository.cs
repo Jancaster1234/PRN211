@@ -11,5 +11,7 @@ namespace Repository
         void AddActionRecord(ActionRecord actionRecord);
         void UpdateActionRecord(ActionRecord actionRecord);
         void DeleteActionRecord(ActionRecord actionRecord);
+
+        List<ActionRecord> FilterActionRecords(int? userId);
     }
 }

@@ -11,5 +11,7 @@ namespace Repository
         void AddSlot(Slot slot);
         void UpdateSlot(Slot slot);
         void DeleteSlot(Slot slot);
+
+        List<Slot> FilterSlots(string? teacherEmail, string? subject, DateTime? startDate, DateTime? endDate);
     }
 }

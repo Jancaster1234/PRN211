@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using BusinessObject.Models;
+using System.Data;
 
 namespace DataAccess
 {
@@ -58,6 +59,38 @@ namespace DataAccess
             using var db = new FptuPrn211MeetMyLecturerContext();
             db.Slots.Remove(slot);
             db.SaveChanges();
+        }
+
+        public List<Slot> FilterSlots(string? teacherEmail, string? subject, DateTime? startDate, DateTime? endDate)
+        {
+            using (var db = new FptuPrn211MeetMyLecturerContext())
+            {
+                // Start with all users in the database
+                var query = db.Slots.AsQueryable();
+
+                // Apply filters if provided
+                if (!string.IsNullOrEmpty(teacherEmail))
+                {
+                    query = query.Where(slot => slot.Teacher.Email == teacherEmail);
+                }
+                if (!string.IsNullOrEmpty(subject))
+                {
+                    query = query.Where(slot => slot.Subject.Name == subject);
+                }
+                if (startDate != null)
+                {
+                    query = query.Where(slot => slot.Date >= startDate);
+                }
+
+                if (endDate != null)
+                {
+                    query = query.Where(slot => slot.Date <= endDate);
+                }
+                // Execute the query and return the filtered users as a list
+                List<Slot> filteredSlots = query.ToList();
+
+                return filteredSlots;
+            }
         }
     }
 }

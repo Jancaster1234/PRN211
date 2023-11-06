@@ -10,5 +10,7 @@ namespace Repository
         void SaveUser(User user);
         void DeleteUser(User user);
         void UpdateUser(User user);
+        void UpdateUserImage(User user, string imageName);
+        List<User> FilterUsers(string? role, string? email, string? major, string? name);
     }
 }
