@@ -3184,11 +3184,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\BusinessObject\\BusinessObject.csproj",
+      "projectUniqueName": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\BusinessObject\\BusinessObject.csproj",
       "projectName": "BusinessObject",
-      "projectPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\BusinessObject\\BusinessObject.csproj",
+      "projectPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\BusinessObject\\BusinessObject.csproj",
       "packagesPath": "C:\\Users\\Thinkpad T14\\.nuget\\packages\\",
-      "outputPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\BusinessObject\\obj\\",
+      "outputPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\BusinessObject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

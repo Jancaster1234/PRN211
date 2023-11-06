@@ -29,6 +29,11 @@ namespace DataAccess
             using var db = new FptuPrn211MeetMyLecturerContext();
             return db.Users.SingleOrDefault(m => m.Email.Equals(email) && m.Password.Equals(password));
         }
+        public User GetUserByEmail(string Email)
+        {
+            using var db = new FptuPrn211MeetMyLecturerContext();
+            return db.Users.SingleOrDefault(user => user.Email.Equals(Email));
+        }
 
         public User GetUserById(int userId)
         {

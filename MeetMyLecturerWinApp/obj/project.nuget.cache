@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uEUStQ103HhBQXtwSpsI1RK7uv9EGML3u+ye6eAP88at59aLNIXH6UiyRhvZn7KK+El7VdcpcyPEMQp8/NUKXg==",
+  "dgSpecHash": "a0DWUhN0JVR4+U3exfHsC3B1IZA1CdDJtofBx5W+DpChf92R6B+2PZECAd8cCZt5uVt0foK5b7V8PMixXAzCFw==",
   "success": true,
-  "projectFilePath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj",
+  "projectFilePath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thinkpad T14\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Thinkpad T14\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

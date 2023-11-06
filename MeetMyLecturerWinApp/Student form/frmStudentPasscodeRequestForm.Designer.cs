@@ -51,6 +51,7 @@
             Controls.Add(dgvPasscodeRequests);
             Name = "frmStudentPasscodeRequestForm";
             Text = "frmStudentPasscodeRequestForm";
+            Load += frmStudentPasscodeRequestForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvPasscodeRequests).EndInit();
             ResumeLayout(false);
         }

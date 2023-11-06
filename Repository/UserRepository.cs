@@ -25,6 +25,11 @@ namespace Repository
             return UserDAO.Instance.GetUserById(id);
         }
 
+        public User GetUserByEmail(string email)
+        {
+            return UserDAO.Instance.GetUserByEmail(email);
+        }
+
         public void SaveUser(User user)
         {
             UserDAO.Instance.AddUser(user);

@@ -12,5 +12,7 @@ namespace Repository
         void UpdateUser(User user);
         void UpdateUserImage(User user, string imageName);
         List<User> FilterUsers(string? role, string? email, string? major, string? name);
+
+        User GetUserByEmail(string email);
     }
 }

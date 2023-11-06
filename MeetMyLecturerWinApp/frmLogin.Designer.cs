@@ -1,5 +1,7 @@
 ﻿using MeetMyLecturerWinApp.Student_form;
 using Repository;
+using MeetMyLecturerWinApp.Teacher_form;
+using MeetMyLecturerWinApp.Admin_form;
 
 namespace MeetMyLecturerWinApp
 {
@@ -30,13 +32,13 @@ namespace MeetMyLecturerWinApp
                 CurrentUser.SetCurrentUser(tmp);
                 if (tmp.Role == 1)
                 {
-                    //frmMainAdmin f = new frmMainAdmin();
-                    //f.Show();
+                    frmMainAdmin f = new frmMainAdmin();
+                    f.Show();
                 }
                 else if (tmp.Role == 2)
                 {
-                    //frmMainTeacher f = new frmMainTeacher();
-                    //f.Show();
+                    frmMainTeacher f = new frmMainTeacher();
+                    f.Show();
                 }
                 else if (tmp.Role == 3)
                 {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UE+GKvEWDQ2eY1MMxlH5x8P8+uhZfcpkBfULObIKBuyvdZYhhjcfNSPAK1fUKSRmS6lQw8Y3HjP+bD+6wQeTmA==",
+  "dgSpecHash": "ZnRoEazVeMP7iNORu6saxuOsDxpYodQlyDD2pR1s8uYcD+figPIJA385kBFqSfv4N6AVItUzTl7YpyHc6u7Amg==",
   "success": true,
-  "projectFilePath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\BusinessObject\\BusinessObject.csproj",
+  "projectFilePath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\BusinessObject\\BusinessObject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thinkpad T14\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Thinkpad T14\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

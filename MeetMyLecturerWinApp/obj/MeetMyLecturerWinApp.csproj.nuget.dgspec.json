@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj": {}
+    "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj": {}
   },
   "projects": {
-    "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\Thinkpad T14\\.nuget\\packages\\",
-        "outputPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\BusinessObject\\obj\\",
+        "outputPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -80,14 +80,14 @@
         }
       }
     },
-    "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Thinkpad T14\\.nuget\\packages\\",
-        "outputPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -109,8 +109,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\BusinessObject\\BusinessObject.csproj"
+              "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -144,14 +144,14 @@
         }
       }
     },
-    "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj": {
+    "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj",
+        "projectUniqueName": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj",
         "projectName": "MeetMyLecturerWinApp",
-        "projectPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj",
+        "projectPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\MeetMyLecturerWinApp\\MeetMyLecturerWinApp.csproj",
         "packagesPath": "C:\\Users\\Thinkpad T14\\.nuget\\packages\\",
-        "outputPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\MeetMyLecturerWinApp\\obj\\",
+        "outputPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\MeetMyLecturerWinApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -173,8 +173,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\Repository\\Repository.csproj": {
-                "projectPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\Repository\\Repository.csproj"
+              "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\Repository\\Repository.csproj"
               }
             }
           }
@@ -211,14 +211,14 @@
         }
       }
     },
-    "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\Repository\\Repository.csproj": {
+    "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Thinkpad T14\\.nuget\\packages\\",
-        "outputPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -240,8 +240,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\Demo\\FU\\PRN211_G8_MeetMyLecturer\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\DataAccess\\DataAccess.csproj"
               }
             }
           }
