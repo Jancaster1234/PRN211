@@ -34,4 +34,19 @@ public partial class Slot
     public virtual Subject? Subject { get; set; }
 
     public virtual User? Teacher { get; set; }
+
+    public Slot(int id, int? teacherId, DateTime? date, TimeSpan? startTime, TimeSpan? endTime, string? passcode, DateTime? createdDate, string? message, string? status, int? subjectId, int? studentLimit)
+    {
+        Id = id;
+        TeacherId = teacherId;
+        Date = date;
+        StartTime = startTime;
+        EndTime = endTime;
+        Passcode = passcode;
+        CreatedDate = createdDate;
+        Message = message;
+        Status = status;
+        SubjectId = subjectId;
+        StudentLimit = studentLimit;
+    }
 }

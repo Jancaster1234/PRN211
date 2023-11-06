@@ -67,6 +67,7 @@ namespace MeetMyLecturerWinApp
                 flowPanel_items.Controls.Clear();
                 string room, className;
                 int slot = 0;
+                TimeSpan additionalTimeSpan = TimeSpan.FromMinutes(90);
                 string[] dayOfWeek = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
                 string[] startTime = new string[] { "16:00:00", "14:15:00", "12:30:00", "10:30:00", "8:45:00", "7:00:00" };
                 flowPanel_items.FlowDirection = FlowDirection.LeftToRight;
@@ -90,7 +91,14 @@ namespace MeetMyLecturerWinApp
                         room = "";
                         className = "";
                     }
-                    frmScheduleItem scheduleItem = new frmScheduleItem(className, room);
+                    frmScheduleItem scheduleItem = new frmScheduleItem(
+                        className, 
+                        room, 
+                        TimeSpan.Parse(startTime[slot - 1]),
+                        TimeSpan.Parse(startTime[slot - 1]).Add(additionalTimeSpan),
+                        startDate.AddDays(page * 7 + (i % 7)),
+                        teacherId
+                        );
                     scheduleItem.TopLevel = false;
                     scheduleItem.FormBorderStyle = FormBorderStyle.None;
                     scheduleItem.Size = new Size(93, 63); // Adjust the size as per your requirements

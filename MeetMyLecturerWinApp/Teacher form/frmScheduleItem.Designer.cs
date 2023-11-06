@@ -63,6 +63,9 @@
             RightToLeft = RightToLeft.Yes;
             Text = "frmScheduleItem";
             Load += frmScheduleItem_Load;
+            Click += frmScheduleItem_Click;
+            MouseLeave += frmScheduleItem_MouseLeave;
+            MouseHover += frmScheduleItem_MouseHover;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -165,3 +165,4 @@ C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\MeetMyLectu
 >>>>>>> b2c31f3121cb83bbcfb68f8301d6bde23f7b7765
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmLogin.resources
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Student_form.frmMainStudent.resources
+C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Teacher_form.frmSlotDialog.resources

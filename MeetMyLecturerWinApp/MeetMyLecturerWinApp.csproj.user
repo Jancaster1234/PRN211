@@ -8,10 +8,13 @@
     <Compile Update="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmScheduleItem.cs">
+    <Compile Update="Teacher form\frmScheduleItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmTeacherSchedule.cs">
+    <Compile Update="Teacher form\frmSlotDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Teacher form\frmTeacherSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Student form\frmMainStudent.cs">
