@@ -59,7 +59,7 @@ namespace MeetMyLecturerWinApp
                 slotDialog.ShowDialog();
                 parent.loadSchedule();
             }
-           
+            
 
         }
 

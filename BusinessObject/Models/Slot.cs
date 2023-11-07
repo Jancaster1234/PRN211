@@ -27,6 +27,8 @@ public partial class Slot
 
     public int? StudentLimit { get; set; }
 
+    public string? Room { get; set; }
+
     public virtual ICollection<PasscodeRequest> PasscodeRequests { get; set; } = new List<PasscodeRequest>();
 
     public virtual ICollection<SlotRecord> SlotRecords { get; set; } = new List<SlotRecord>();
@@ -35,7 +37,7 @@ public partial class Slot
 
     public virtual User? Teacher { get; set; }
 
-    public Slot(int id, int? teacherId, DateTime? date, TimeSpan? startTime, TimeSpan? endTime, string? passcode, DateTime? createdDate, string? message, string? status, int? subjectId, int? studentLimit)
+    public Slot(int id, int? teacherId, DateTime? date, TimeSpan? startTime, TimeSpan? endTime, string? passcode, DateTime? createdDate, string? message, string? status, int? subjectId, int? studentLimit, string? room)
     {
         Id = id;
         TeacherId = teacherId;
@@ -48,5 +50,6 @@ public partial class Slot
         Status = status;
         SubjectId = subjectId;
         StudentLimit = studentLimit;
+        Room = room;
     }
 }

@@ -51,6 +51,9 @@
             gbStatus = new GroupBox();
             rbInactive = new RadioButton();
             rdActive = new RadioButton();
+            label10 = new Label();
+            txtRoom = new TextBox();
+            btnDelete = new Button();
             gbStatus.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,7 +70,7 @@
             // txtDate
             // 
             txtDate.Enabled = false;
-            txtDate.Location = new Point(81, 41);
+            txtDate.Location = new Point(109, 41);
             txtDate.Name = "txtDate";
             txtDate.Size = new Size(100, 23);
             txtDate.TabIndex = 1;
@@ -75,7 +78,7 @@
             // txtStart
             // 
             txtStart.Enabled = false;
-            txtStart.Location = new Point(231, 41);
+            txtStart.Location = new Point(249, 41);
             txtStart.Name = "txtStart";
             txtStart.Size = new Size(100, 23);
             txtStart.TabIndex = 2;
@@ -91,7 +94,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(194, 44);
+            label2.Location = new Point(212, 44);
             label2.Name = "label2";
             label2.Size = new Size(31, 15);
             label2.TabIndex = 4;
@@ -119,9 +122,9 @@
             // 
             cboSubject.DropDownStyle = ComboBoxStyle.DropDownList;
             cboSubject.FormattingEnabled = true;
-            cboSubject.Location = new Point(81, 86);
+            cboSubject.Location = new Point(109, 86);
             cboSubject.Name = "cboSubject";
-            cboSubject.Size = new Size(205, 23);
+            cboSubject.Size = new Size(240, 23);
             cboSubject.TabIndex = 7;
             // 
             // label5
@@ -136,7 +139,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(20, 130);
+            label6.Location = new Point(20, 185);
             label6.Name = "label6";
             label6.Size = new Size(53, 15);
             label6.TabIndex = 9;
@@ -144,7 +147,7 @@
             // 
             // txtMessage
             // 
-            txtMessage.Location = new Point(81, 130);
+            txtMessage.Location = new Point(81, 185);
             txtMessage.Multiline = true;
             txtMessage.Name = "txtMessage";
             txtMessage.Size = new Size(412, 68);
@@ -152,7 +155,7 @@
             // 
             // btnGenerate
             // 
-            btnGenerate.Location = new Point(337, 217);
+            btnGenerate.Location = new Point(337, 272);
             btnGenerate.Name = "btnGenerate";
             btnGenerate.Size = new Size(156, 23);
             btnGenerate.TabIndex = 12;
@@ -162,7 +165,7 @@
             // 
             // txtPasscode
             // 
-            txtPasscode.Location = new Point(81, 218);
+            txtPasscode.Location = new Point(81, 273);
             txtPasscode.Name = "txtPasscode";
             txtPasscode.ReadOnly = true;
             txtPasscode.Size = new Size(250, 23);
@@ -171,7 +174,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(22, 221);
+            label7.Location = new Point(22, 276);
             label7.Name = "label7";
             label7.Size = new Size(56, 15);
             label7.TabIndex = 14;
@@ -180,7 +183,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(309, 89);
+            label8.Location = new Point(20, 135);
             label8.Name = "label8";
             label8.Size = new Size(78, 15);
             label8.TabIndex = 15;
@@ -188,14 +191,14 @@
             // 
             // txtStudentLimit
             // 
-            txtStudentLimit.Location = new Point(393, 86);
+            txtStudentLimit.Location = new Point(109, 132);
             txtStudentLimit.Name = "txtStudentLimit";
             txtStudentLimit.Size = new Size(100, 23);
             txtStudentLimit.TabIndex = 16;
             // 
             // btnSubmit
             // 
-            btnSubmit.Location = new Point(328, 304);
+            btnSubmit.Location = new Point(328, 385);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(75, 23);
             btnSubmit.TabIndex = 17;
@@ -205,7 +208,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(418, 304);
+            btnCancel.Location = new Point(418, 385);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(75, 23);
             btnCancel.TabIndex = 18;
@@ -216,7 +219,7 @@
             // linkHide
             // 
             linkHide.AutoSize = true;
-            linkHide.Location = new Point(81, 244);
+            linkHide.Location = new Point(81, 299);
             linkHide.Name = "linkHide";
             linkHide.Size = new Size(32, 15);
             linkHide.TabIndex = 19;
@@ -227,7 +230,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(22, 287);
+            label9.Location = new Point(22, 342);
             label9.Name = "label9";
             label9.Size = new Size(39, 15);
             label9.TabIndex = 20;
@@ -237,7 +240,7 @@
             // 
             gbStatus.Controls.Add(rbInactive);
             gbStatus.Controls.Add(rdActive);
-            gbStatus.Location = new Point(81, 266);
+            gbStatus.Location = new Point(81, 321);
             gbStatus.Name = "gbStatus";
             gbStatus.Size = new Size(219, 49);
             gbStatus.TabIndex = 21;
@@ -266,11 +269,40 @@
             rdActive.Text = "Active";
             rdActive.UseVisualStyleBackColor = true;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(348, 135);
+            label10.Name = "label10";
+            label10.Size = new Size(39, 15);
+            label10.TabIndex = 22;
+            label10.Text = "Room";
+            // 
+            // txtRoom
+            // 
+            txtRoom.Location = new Point(393, 132);
+            txtRoom.Name = "txtRoom";
+            txtRoom.Size = new Size(100, 23);
+            txtRoom.TabIndex = 23;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(238, 385);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(75, 23);
+            btnDelete.TabIndex = 24;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // frmSlotDialog
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(505, 339);
+            ClientSize = new Size(505, 420);
+            Controls.Add(btnDelete);
+            Controls.Add(txtRoom);
+            Controls.Add(label10);
             Controls.Add(gbStatus);
             Controls.Add(label9);
             Controls.Add(linkHide);
@@ -326,5 +358,8 @@
         private GroupBox gbStatus;
         private RadioButton rbInactive;
         private RadioButton rdActive;
+        private Label label10;
+        private TextBox txtRoom;
+        private Button btnDelete;
     }
 }

@@ -63,7 +63,7 @@ namespace DataAccess
         public void UpdateSlot(Slot slot)
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            db.Entry(slot).State = EntityState.Modified;
+            db.Slots.Update(slot);
             db.SaveChanges();
         }
 

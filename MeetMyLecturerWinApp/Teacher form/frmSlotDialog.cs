@@ -17,10 +17,12 @@ namespace MeetMyLecturerWinApp.Teacher_form
         ISubjectRepository subjectRepository = new SubjectRepository();
         ISlotRepository slotRepository = new SlotRepository();
         int teacherId;
+        int id = 0;
         DateTime date;
         TimeSpan start;
         TimeSpan end;
         bool hidePass = false;
+        Slot? slotInfo;
         public frmSlotDialog(int teacherId, DateTime date, TimeSpan start, TimeSpan end)
         {
             InitializeComponent();
@@ -43,6 +45,7 @@ namespace MeetMyLecturerWinApp.Teacher_form
         private void frmSlotDialog_Load(object sender, EventArgs e)
         {
             List<Subject> subjects = subjectRepository.GetSubjects();
+            slotInfo = slotRepository.getSlot(teacherId, date, start);
 
             cboSubject.DisplayMember = "Name"; // Display the Name property
             cboSubject.ValueMember = "Id";    // Use the Id property as the actual value
@@ -52,8 +55,21 @@ namespace MeetMyLecturerWinApp.Teacher_form
             txtDate.Text = date.ToString("dd/MM/yyyy");
             txtStart.Text = start.ToString();
             txtEnd.Text = end.ToString();
-
             rdActive.Checked = true;
+
+            if (slotInfo == null) { 
+                btnDelete.Visible = false; 
+            } else
+            {
+                txtMessage.Text = slotInfo.Message;
+                txtPasscode.Text = slotInfo.Passcode;
+                txtStudentLimit.Text = slotInfo.StudentLimit.ToString();
+                txtRoom.Text = slotInfo.Room;
+                if (slotInfo.Status == "Active") rdActive.Checked = true; else rbInactive.Checked = true;
+                cboSubject.SelectedValue = slotInfo.SubjectId;
+                id = slotInfo.Id;
+            }
+
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -86,10 +102,27 @@ namespace MeetMyLecturerWinApp.Teacher_form
         {
             try
             {
-                int subjectId = (int)cboSubject.SelectedValue;
-                string status = rdActive.Checked ? "Active" : "Inactive";
-                Slot slot = new Slot(
-                        0,
+                              
+                if (slotInfo != null)
+                {
+                    slotInfo.Passcode = txtPasscode.Text;
+                    slotInfo.Message = txtMessage.Text;
+                    slotInfo.Status = rdActive.Checked ? "Active" : "Inactive";
+                    slotInfo.SubjectId = (int)cboSubject.SelectedValue;
+                    slotInfo.StudentLimit = int.Parse(txtStudentLimit.Text);
+                    slotInfo.Room = txtRoom.Text;
+
+                    slotRepository.UpdateSlot(slotInfo);
+                    MessageBox.Show("Slot is Updated");
+
+                }
+                else
+                {
+
+                    int subjectId = (int)cboSubject.SelectedValue;
+                    string status = rdActive.Checked ? "Active" : "Inactive";
+                    Slot slot = new Slot(
+                        id,
                         teacherId,
                         date,
                         start,
@@ -99,11 +132,13 @@ namespace MeetMyLecturerWinApp.Teacher_form
                         txtMessage.Text,
                         status,
                         subjectId,
-                        int.Parse(txtStudentLimit.Text)
+                        int.Parse(txtStudentLimit.Text),
+                        txtRoom.Text
                     );
-                slotRepository.AddSlot(slot);
+                    slotRepository.AddSlot(slot);
+                    MessageBox.Show("Slot is Added");
+                }
                 this.Close();
-                MessageBox.Show("Slot Added");
 
             }
             catch (Exception ex)
@@ -115,6 +150,14 @@ namespace MeetMyLecturerWinApp.Teacher_form
         private void gbStatus_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Slot deleteSlot = slotRepository.getSlot(teacherId, date, start);
+            slotRepository.DeleteSlot(deleteSlot);
+            MessageBox.Show("Slot is deleted");
+            this.Close();
         }
     }
 }

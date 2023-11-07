@@ -192,7 +192,9 @@ public partial class FptuPrn211MeetMyLecturerContext : DbContext
             entity.Property(e => e.StudentLimit).HasColumnName("studentLimit");
             entity.Property(e => e.SubjectId).HasColumnName("subjectId");
             entity.Property(e => e.TeacherId).HasColumnName("teacherId");
-
+            entity.Property(e => e.Room)
+                .HasMaxLength(50)
+                .HasColumnName("room");
             entity.HasOne(d => d.Subject).WithMany(p => p.Slots)
                 .HasForeignKey(d => d.SubjectId)
                 .HasConstraintName("FK_slot_subject");

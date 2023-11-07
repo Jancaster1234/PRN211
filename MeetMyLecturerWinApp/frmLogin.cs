@@ -52,14 +52,18 @@ namespace MeetMyLecturerWinApp
 
         private void linkForgetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             frmForgotPassword frmForgotPassword = new frmForgotPassword();
-            frmForgotPassword.Show();
+            frmForgotPassword.ShowDialog();
+            this.Show();
         }
 
         private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             frmRegister frmRegister = new frmRegister();
-            frmRegister.Show();
+            frmRegister.ShowDialog();
+            this.Show();
         }
     }
 }

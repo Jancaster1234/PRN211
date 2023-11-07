@@ -20,8 +20,9 @@ namespace MeetMyLecturerWinApp
         IScheduleRecordRepository scheduleRecordRepository = new ScheduleRecordRepository();
         ISlotRepository slotRepository = new SlotRepository();
         int page = 0;
-        DateTime startDate = GetBeginningOfWeek(DateTime.Now);
         int teacherId = 1;
+        DateTime startDate = GetBeginningOfWeek(DateTime.Now);
+
 
         public frmTeacherSchedule()
         {
@@ -49,6 +50,7 @@ namespace MeetMyLecturerWinApp
                     if (openFileDialog.ShowDialog() == DialogResult.OK)
                     {
                         txtFilePath.Text = openFileDialog.FileName;
+                        btnSave.Visible = true;
                         using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
                         {
                             using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream, new ExcelReaderConfiguration()
@@ -111,6 +113,7 @@ namespace MeetMyLecturerWinApp
                         if (checkSlot != null)
                         {
                             isSlot = true;
+                            room = checkSlot.Room;
                         }
                     }
                     frmScheduleItem scheduleItem = new frmScheduleItem(
@@ -212,6 +215,7 @@ namespace MeetMyLecturerWinApp
         private void frmTeacherSchedule_Load(object sender, EventArgs e)
         {
             loadSchedule();
+            btnSave.Visible = false;
         }
 
 

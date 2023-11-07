@@ -51,6 +51,7 @@
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
+            label2 = new Label();
             panel_header.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -66,6 +67,7 @@
             // panel_header
             // 
             panel_header.BackColor = SystemColors.GradientInactiveCaption;
+            panel_header.Controls.Add(label2);
             panel_header.Controls.Add(lbDateWeek);
             panel_header.Controls.Add(btnForward);
             panel_header.Controls.Add(btnBack);
@@ -81,7 +83,7 @@
             // lbDateWeek
             // 
             lbDateWeek.AutoSize = true;
-            lbDateWeek.Location = new Point(494, 61);
+            lbDateWeek.Location = new Point(632, 61);
             lbDateWeek.Name = "lbDateWeek";
             lbDateWeek.Size = new Size(122, 15);
             lbDateWeek.TabIndex = 11;
@@ -89,7 +91,7 @@
             // 
             // btnForward
             // 
-            btnForward.Location = new Point(682, 53);
+            btnForward.Location = new Point(770, 53);
             btnForward.Name = "btnForward";
             btnForward.Size = new Size(29, 30);
             btnForward.TabIndex = 10;
@@ -99,7 +101,7 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(647, 53);
+            btnBack.Location = new Point(585, 53);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(29, 30);
             btnBack.TabIndex = 9;
@@ -109,7 +111,7 @@
             // 
             // btnBrowse
             // 
-            btnBrowse.Location = new Point(441, 12);
+            btnBrowse.Location = new Point(430, 53);
             btnBrowse.Name = "btnBrowse";
             btnBrowse.Size = new Size(32, 23);
             btnBrowse.TabIndex = 8;
@@ -119,7 +121,7 @@
             // 
             // txtFilePath
             // 
-            txtFilePath.Location = new Point(24, 13);
+            txtFilePath.Location = new Point(12, 53);
             txtFilePath.Name = "txtFilePath";
             txtFilePath.ReadOnly = true;
             txtFilePath.Size = new Size(411, 23);
@@ -127,7 +129,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(24, 42);
+            btnSave.Location = new Point(474, 52);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
             btnSave.TabIndex = 6;
@@ -286,6 +288,15 @@
             label8.TabIndex = 7;
             label8.Text = "7:00 - 8:30";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 35);
+            label2.Name = "label2";
+            label2.Size = new Size(152, 15);
+            label2.TabIndex = 7;
+            label2.Text = "Import schedule from Excel";
+            // 
             // frmTeacherSchedule
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -333,5 +344,6 @@
         private Label label8;
         private Label label13;
         private Label MONDAY;
+        private Label label2;
     }
 }
