@@ -7,6 +7,7 @@ namespace Repository
         User CheckLogin(string email, string password);
         List<User> GetUsers();
         User GetUser(int id);
+        User GetUserByEmail(string email);
         void SaveUser(User user);
         void DeleteUser(User user);
         void UpdateUser(User user);

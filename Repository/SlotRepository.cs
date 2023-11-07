@@ -35,5 +35,10 @@ namespace Repository
         {
             return SlotDAO.Instance.FilterSlots(teacherEmail, subject, startDate, endDate);
         }
+
+        public Slot getSlot(int teacherId, DateTime date, TimeSpan start)
+        {
+            return SlotDAO.Instance.GetSlot(teacherId, date, start);
+        }
     }
 }

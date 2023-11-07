@@ -18,13 +18,25 @@ namespace MeetMyLecturerWinApp
     {
         DataTableCollection tableCollection;
         IScheduleRecordRepository scheduleRecordRepository = new ScheduleRecordRepository();
+        ISlotRepository slotRepository = new SlotRepository();
         int page = 0;
-        DateTime startDate = DateTime.Now;
+        DateTime startDate = GetBeginningOfWeek(DateTime.Now);
         int teacherId = 1;
 
         public frmTeacherSchedule()
         {
             InitializeComponent();
+        }
+
+        static DateTime GetBeginningOfWeek(DateTime date)
+        {
+            int daysToSubtract = (int)date.DayOfWeek - (int)DayOfWeek.Monday;
+            if (daysToSubtract < 0)
+            {
+                daysToSubtract += 7;
+            }
+            DateTime beginningOfWeek = date.AddDays(-daysToSubtract);
+            return beginningOfWeek;
         }
         private void btnBrowse_Click(object sender, EventArgs e)
         {
@@ -67,6 +79,7 @@ namespace MeetMyLecturerWinApp
                 flowPanel_items.Controls.Clear();
                 string room, className;
                 int slot = 0;
+                bool isSlot;
                 TimeSpan additionalTimeSpan = TimeSpan.FromMinutes(90);
                 string[] dayOfWeek = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
                 string[] startTime = new string[] { "16:00:00", "14:15:00", "12:30:00", "10:30:00", "8:45:00", "7:00:00" };
@@ -75,12 +88,16 @@ namespace MeetMyLecturerWinApp
                     + startDate.AddDays(page * 7 + 6).ToString("dd/MM/yyyy");
                 for (int i = 41; i >= 0; i--)
                 {
+                    isSlot = false;
                     if (i % 7 == 6)
                     {
                         slot += 1;
                     }
+                    TimeSpan start = TimeSpan.Parse(startTime[slot - 1]);
+                    DateTime date = startDate.AddDays(page * 7 + (i % 7));
+
                     ScheduleRecord scheduleRecord = scheduleRecordRepository
-                    .GetScheduleRecordByTimeAndDate(TimeSpan.Parse(startTime[slot - 1]), dayOfWeek[i % 7], page, teacherId);
+                    .GetScheduleRecordByTimeAndDate(start, dayOfWeek[i % 7], page, teacherId);
                     if (scheduleRecord != null)
                     {
                         room = scheduleRecord.Room;
@@ -90,14 +107,21 @@ namespace MeetMyLecturerWinApp
                     {
                         room = "";
                         className = "";
+                        Slot checkSlot = slotRepository.getSlot(teacherId, date, start);
+                        if (checkSlot != null)
+                        {
+                            isSlot = true;
+                        }
                     }
                     frmScheduleItem scheduleItem = new frmScheduleItem(
-                        className, 
-                        room, 
-                        TimeSpan.Parse(startTime[slot - 1]),
-                        TimeSpan.Parse(startTime[slot - 1]).Add(additionalTimeSpan),
-                        startDate.AddDays(page * 7 + (i % 7)),
-                        teacherId
+                        className,
+                        room,
+                        start,
+                        start.Add(additionalTimeSpan),
+                        date,
+                        teacherId,
+                        isSlot,
+                        this
                         );
                     scheduleItem.TopLevel = false;
                     scheduleItem.FormBorderStyle = FormBorderStyle.None;

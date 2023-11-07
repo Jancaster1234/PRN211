@@ -15,6 +15,7 @@ D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\Repository.dll
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\refint\Repository.dll
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\Repository.pdb
 D:\Demo\FU\PRN211_G8_MeetMyLecturer\Repository\obj\Debug\net6.0\ref\Repository.dll
+<<<<<<< HEAD
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\Repository\bin\Debug\net6.0\Repository.deps.json
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\Repository\bin\Debug\net6.0\Repository.dll
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\Repository\bin\Debug\net6.0\Repository.pdb
@@ -32,3 +33,22 @@ C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\Repository\
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\Repository\obj\Debug\net6.0\refint\Repository.dll
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\Repository\obj\Debug\net6.0\Repository.pdb
 C:\Users\Administrator\Desktop\study FPT\PRN211\project nhóm\PRN211\Repository\obj\Debug\net6.0\ref\Repository.dll
+=======
+D:\FPT\PRN211\GroupProject\PRN211\Repository\bin\Debug\net6.0\Repository.deps.json
+D:\FPT\PRN211\GroupProject\PRN211\Repository\bin\Debug\net6.0\Repository.dll
+D:\FPT\PRN211\GroupProject\PRN211\Repository\bin\Debug\net6.0\Repository.pdb
+D:\FPT\PRN211\GroupProject\PRN211\Repository\bin\Debug\net6.0\BusinessObject.dll
+D:\FPT\PRN211\GroupProject\PRN211\Repository\bin\Debug\net6.0\DataAccess.dll
+D:\FPT\PRN211\GroupProject\PRN211\Repository\bin\Debug\net6.0\DataAccess.pdb
+D:\FPT\PRN211\GroupProject\PRN211\Repository\bin\Debug\net6.0\BusinessObject.pdb
+D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\Repository.csproj.AssemblyReference.cache
+D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\Repository.AssemblyInfoInputs.cache
+D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\Repository.AssemblyInfo.cs
+D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\Repository.csproj.CoreCompileInputs.cache
+D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\Repository.csproj.CopyComplete
+D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\Repository.dll
+D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\refint\Repository.dll
+D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\Repository.pdb
+D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\ref\Repository.dll
+>>>>>>> d9186b570898db5abfdb8e9b8e2d8254f4bc1242

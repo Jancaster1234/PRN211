@@ -102,7 +102,9 @@ namespace MeetMyLecturerWinApp.Teacher_form
                         int.Parse(txtStudentLimit.Text)
                     );
                 slotRepository.AddSlot(slot);
+                this.Close();
                 MessageBox.Show("Slot Added");
+
             }
             catch (Exception ex)
             {

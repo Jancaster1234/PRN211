@@ -40,6 +40,19 @@ namespace DataAccess
             return db.Slots.ToList();
         }
 
+        public Slot GetSlot(int teacherId, DateTime date, TimeSpan startTime)
+        {
+            using (FptuPrn211MeetMyLecturerContext dbContext = new FptuPrn211MeetMyLecturerContext())
+            {
+                Slot slot = dbContext.Slots
+                    .FirstOrDefault(s => s.TeacherId == teacherId
+                                     && s.Date == date
+                                     && s.StartTime == startTime);
+
+                return slot;
+            }
+        }
+
         public void AddSlot(Slot slot)
         {
             using var db = new FptuPrn211MeetMyLecturerContext();

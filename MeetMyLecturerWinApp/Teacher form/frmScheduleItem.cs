@@ -19,7 +19,9 @@ namespace MeetMyLecturerWinApp
         TimeSpan end;
         DateTime date;
         int teacherId;
-        public frmScheduleItem(string className, string room, TimeSpan start, TimeSpan end, DateTime date, int teacherId)
+        bool isSlot = false;
+        frmTeacherSchedule parent;
+        public frmScheduleItem(string className, string room, TimeSpan start, TimeSpan end, DateTime date, int teacherId, bool slot, frmTeacherSchedule parent)
         {
             InitializeComponent();
             this.className = className;
@@ -28,6 +30,8 @@ namespace MeetMyLecturerWinApp
             this.end = end;
             this.date = date;
             this.teacherId = teacherId;
+            this.isSlot = slot;
+            this.parent = parent;
         }
 
 
@@ -39,7 +43,12 @@ namespace MeetMyLecturerWinApp
             {
                 this.BackColor = Color.FromArgb(191, 200, 165);
             }
+            if (isSlot)
+            {
+                this.BackColor = Color.FromArgb(79, 250, 113);
+                lbClass.Text = "Free Slot";
 
+            }
         }
 
         private void frmScheduleItem_Click(object sender, EventArgs e)
@@ -47,8 +56,10 @@ namespace MeetMyLecturerWinApp
             if (className == "")
             {
                 frmSlotDialog slotDialog = new frmSlotDialog(teacherId, date, start, end);
-                slotDialog.Show();
+                slotDialog.ShowDialog();
+                parent.loadSchedule();
             }
+           
 
         }
 

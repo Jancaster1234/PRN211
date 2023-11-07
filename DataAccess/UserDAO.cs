@@ -102,6 +102,10 @@ namespace DataAccess
             db.Entry(user).State = EntityState.Modified;
             db.SaveChanges();
         }
-
+        public User GetUserByEmail(string Email)
+        {
+            using var db = new FptuPrn211MeetMyLecturerContext();
+            return db.Users.SingleOrDefault(user => user.Email.Equals(Email));
+        }
     }
 }

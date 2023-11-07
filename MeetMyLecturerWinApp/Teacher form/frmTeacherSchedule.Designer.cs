@@ -75,7 +75,7 @@
             panel_header.Dock = DockStyle.Top;
             panel_header.Location = new Point(0, 0);
             panel_header.Name = "panel_header";
-            panel_header.Size = new Size(849, 86);
+            panel_header.Size = new Size(811, 86);
             panel_header.TabIndex = 7;
             // 
             // lbDateWeek
@@ -148,7 +148,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 86);
             panel1.Name = "panel1";
-            panel1.Size = new Size(849, 43);
+            panel1.Size = new Size(811, 43);
             panel1.TabIndex = 8;
             // 
             // label7
@@ -227,7 +227,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 129);
             panel2.Name = "panel2";
-            panel2.Size = new Size(85, 444);
+            panel2.Size = new Size(85, 429);
             panel2.TabIndex = 9;
             // 
             // label13
@@ -290,7 +290,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(849, 573);
+            ClientSize = new Size(811, 558);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(panel_header);
