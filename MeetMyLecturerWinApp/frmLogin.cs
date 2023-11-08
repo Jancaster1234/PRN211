@@ -65,5 +65,10 @@ namespace MeetMyLecturerWinApp
             frmRegister.ShowDialog();
             this.Show();
         }
+
+        private void frmLogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

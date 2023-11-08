@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MeetMyLecturerWinApp
 {
@@ -100,16 +101,20 @@ namespace MeetMyLecturerWinApp
 
                     ScheduleRecord scheduleRecord = scheduleRecordRepository
                     .GetScheduleRecordByTimeAndDate(start, dayOfWeek[i % 7], page, teacherId);
+                    Slot checkSlot = slotRepository.getSlot(teacherId, date, start);
                     if (scheduleRecord != null)
                     {
                         room = scheduleRecord.Room;
                         className = scheduleRecord.ClassName;
+                        if (checkSlot != null)
+                        {
+                            slotRepository.DeleteSlot(checkSlot);
+                        }
                     }
                     else
                     {
                         room = "";
                         className = "";
-                        Slot checkSlot = slotRepository.getSlot(teacherId, date, start);
                         if (checkSlot != null)
                         {
                             isSlot = true;
@@ -144,65 +149,73 @@ namespace MeetMyLecturerWinApp
         {
             try
             {
-                int count = 0;
-                int id = 0;
-                string startTimeStr;
-                string endTimeStr;
-                string room;
-                string className;
-                string dateStr = "";
-                string courseName = "";
-                scheduleRecordRepository.DeleteScheduleRecordByTeacherId(teacherId);
-                DataTable ds = tableCollection["Sheet1"];
-                foreach (DataRow row in ds.Rows)
+                var confirmResult = MessageBox.Show("Import new schedule will overwrite old schedule. Created Free slots, which occur at the" +
+                    " same time wtih a teaching slot of the new schedule, will be automatically deleted. Proceed to continue?",
+                                         "Confirm Action",
+                                         MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (confirmResult == DialogResult.Yes)
                 {
-                    count += 1;
-                    // Skip the last row if it is the new row    
 
-                    // Retrieve the values from the row
-                    if (count == 1)
+                    int count = 0;
+                    int id = 0;
+                    string startTimeStr;
+                    string endTimeStr;
+                    string room;
+                    string className;
+                    string dateStr = "";
+                    string courseName = "";
+                    scheduleRecordRepository.DeleteScheduleRecordByTeacherId(teacherId);
+                    DataTable ds = tableCollection["Sheet1"];
+                    foreach (DataRow row in ds.Rows)
                     {
-                        courseName = row["Course Name"].ToString();
-                        startDate = DateTime.Parse(row["Day"].ToString());
-                        DateTime now = DateTime.Now;
-                        TimeSpan timeDifferent = (now - startDate);
-                        page = timeDifferent.Days / 7;
-                    }
-                    if ((count - 1) % 6 == 0)
-                    {
-                        dateStr = row["Day"].ToString();
-                    }
-                    startTimeStr = row["Start"].ToString();
-                    endTimeStr = row["End"].ToString();
-                    room = row["Room"].ToString();
-                    className = row["Class"].ToString();
-                    // Parse the date and time values
-                    DateTime date = DateTime.Parse(dateStr);
-                    TimeSpan startTime = TimeSpan.Parse(startTimeStr);
-                    TimeSpan endTime = TimeSpan.Parse(endTimeStr);
-                    if (className != "")
-                    {
-                        // Create the ScheduleRecord object
-                        ScheduleRecord sr = new ScheduleRecord(
-                            id: id, // Provide the appropriate value for the ID
-                            location: null, // Provide the appropriate value for the location
-                            room: room,
-                            className: className,
-                            courseName: courseName,
-                            date: date,
-                            startTime: startTime,
-                            endTime: endTime,
-                            createdDate: DateTime.Now, // Provide the appropriate value for the created date
-                            teacherId: teacherId // Provide the appropriate value for the teacher ID
-                        );
+                        count += 1;
+                        // Skip the last row if it is the new row    
 
-                        // Add the ScheduleRecord to the list
-                        scheduleRecordRepository.AddScheduleRecord(sr);
+                        // Retrieve the values from the row
+                        if (count == 1)
+                        {
+                            courseName = row["Course Name"].ToString();
+                            startDate = DateTime.Parse(row["Day"].ToString());
+                            DateTime now = DateTime.Now;
+                            TimeSpan timeDifferent = (now - startDate);
+                            page = timeDifferent.Days / 7;
+                        }
+                        if ((count - 1) % 6 == 0)
+                        {
+                            dateStr = row["Day"].ToString();
+                        }
+                        startTimeStr = row["Start"].ToString();
+                        endTimeStr = row["End"].ToString();
+                        room = row["Room"].ToString();
+                        className = row["Class"].ToString();
+                        // Parse the date and time values
+                        DateTime date = DateTime.Parse(dateStr);
+                        TimeSpan startTime = TimeSpan.Parse(startTimeStr);
+                        TimeSpan endTime = TimeSpan.Parse(endTimeStr);
+                        if (className != "")
+                        {
+                            // Create the ScheduleRecord object
+                            ScheduleRecord sr = new ScheduleRecord(
+                                id: id, // Provide the appropriate value for the ID
+                                location: null, // Provide the appropriate value for the location
+                                room: room,
+                                className: className,
+                                courseName: courseName,
+                                date: date,
+                                startTime: startTime,
+                                endTime: endTime,
+                                createdDate: DateTime.Now, // Provide the appropriate value for the created date
+                                teacherId: teacherId // Provide the appropriate value for the teacher ID
+                            );
 
+                            // Add the ScheduleRecord to the list
+                            scheduleRecordRepository.AddScheduleRecord(sr);
+
+                        }
                     }
+                    MessageBox.Show("Saved to database");
+                    loadSchedule();
                 }
-                MessageBox.Show("Saved to database");
-                loadSchedule();
             }
             catch (Exception ex)
             {

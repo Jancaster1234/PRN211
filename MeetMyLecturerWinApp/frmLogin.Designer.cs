@@ -138,6 +138,7 @@
             Controls.Add(pictureBox1);
             Name = "frmLogIn";
             Text = "frmLogin";
+            Load += frmLogIn_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

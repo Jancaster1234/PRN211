@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MeetMyLecturerWinApp.Teacher_form
 {
@@ -57,9 +58,11 @@ namespace MeetMyLecturerWinApp.Teacher_form
             txtEnd.Text = end.ToString();
             rdActive.Checked = true;
 
-            if (slotInfo == null) { 
-                btnDelete.Visible = false; 
-            } else
+            if (slotInfo == null)
+            {
+                btnDelete.Visible = false;
+            }
+            else
             {
                 txtMessage.Text = slotInfo.Message;
                 txtPasscode.Text = slotInfo.Passcode;
@@ -84,7 +87,7 @@ namespace MeetMyLecturerWinApp.Teacher_form
 
         private void linkHide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (hidePass)
+            if (!hidePass)
             {
                 linkHide.Text = "Show";
                 txtPasscode.UseSystemPasswordChar = true;
@@ -102,7 +105,7 @@ namespace MeetMyLecturerWinApp.Teacher_form
         {
             try
             {
-                              
+
                 if (slotInfo != null)
                 {
                     slotInfo.Passcode = txtPasscode.Text;
@@ -155,9 +158,16 @@ namespace MeetMyLecturerWinApp.Teacher_form
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Slot deleteSlot = slotRepository.getSlot(teacherId, date, start);
-            slotRepository.DeleteSlot(deleteSlot);
-            MessageBox.Show("Slot is deleted");
-            this.Close();
+            var confirmResult = MessageBox.Show("Are you sure to delete this slot?",
+                                         "Confirm Delete",
+                                         MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                slotRepository.DeleteSlot(deleteSlot);
+                MessageBox.Show("Slot is deleted");
+                this.Close();
+            }
+
         }
     }
 }

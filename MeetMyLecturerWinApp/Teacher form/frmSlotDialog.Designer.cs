@@ -147,10 +147,10 @@
             // 
             // txtMessage
             // 
-            txtMessage.Location = new Point(81, 185);
+            txtMessage.Location = new Point(109, 185);
             txtMessage.Multiline = true;
             txtMessage.Name = "txtMessage";
-            txtMessage.Size = new Size(412, 68);
+            txtMessage.Size = new Size(384, 68);
             txtMessage.TabIndex = 10;
             // 
             // btnGenerate
@@ -165,10 +165,10 @@
             // 
             // txtPasscode
             // 
-            txtPasscode.Location = new Point(81, 273);
+            txtPasscode.Location = new Point(109, 273);
             txtPasscode.Name = "txtPasscode";
             txtPasscode.ReadOnly = true;
-            txtPasscode.Size = new Size(250, 23);
+            txtPasscode.Size = new Size(222, 23);
             txtPasscode.TabIndex = 13;
             // 
             // label7
@@ -219,7 +219,7 @@
             // linkHide
             // 
             linkHide.AutoSize = true;
-            linkHide.Location = new Point(81, 299);
+            linkHide.Location = new Point(109, 303);
             linkHide.Name = "linkHide";
             linkHide.Size = new Size(32, 15);
             linkHide.TabIndex = 19;
@@ -240,7 +240,7 @@
             // 
             gbStatus.Controls.Add(rbInactive);
             gbStatus.Controls.Add(rdActive);
-            gbStatus.Location = new Point(81, 321);
+            gbStatus.Location = new Point(109, 321);
             gbStatus.Name = "gbStatus";
             gbStatus.Size = new Size(219, 49);
             gbStatus.TabIndex = 21;
