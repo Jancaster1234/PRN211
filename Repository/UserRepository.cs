@@ -48,5 +48,15 @@ namespace Repository
         {
             UserDAO.Instance.UpdateUserImage(user, imageName);
         }
+
+        public void ChangeIsShowProfile(User user, bool status)
+        {
+            UserDAO.Instance.ChangeIsShowProfile(user, status);
+        }
+
+        public void ChangeIsShowSchedule(User user, bool status)
+        {
+            UserDAO.Instance.ChangeIsShowSchedule(user, status);
+        }
     }
 }

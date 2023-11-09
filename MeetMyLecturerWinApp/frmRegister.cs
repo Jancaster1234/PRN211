@@ -40,6 +40,13 @@ namespace MeetMyLecturerWinApp
                             user.Email = txtEmail.Text;
                             user.Name = txtName.Text;
                             user.Password = txtPass.Text;
+                            user.Role = 3;
+                            user.Image = "default_profile_picture.jpg";
+                            user.UserStatus = "Active";
+                            user.IsShowProfile = true;
+                            user.IsShowSchedule = true;
+                            user.Info = "nothing yet";
+                            user.Major = "SE";
                             userRepository.SaveUser(user);
                             MessageBox.Show("Sign Up Success", "Notification");
                             this.Close();

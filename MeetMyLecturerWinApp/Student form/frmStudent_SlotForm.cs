@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Repository;
 using BusinessObject.Models;
+using MeetMyLecturerWinApp.Student_form;
 using System.Xml.Linq;
 
 namespace MeetMyLecturerWinApp
@@ -19,19 +20,56 @@ namespace MeetMyLecturerWinApp
         public frmStudent_SlotForm()
         {
             InitializeComponent();
+            dgvSlots.CellContentDoubleClick += dgvSlots_CellContentDoubleClick;
         }
+
+        private readonly Func<Slot, object> slotProjection = slot => new
+        {
+            Id = slot.Id,
+            Teacher = slot.Teacher?.Name ?? "N/A",
+            TeacherEmail = slot.Teacher?.Email ?? "N/A",
+            Date = slot.Date ?? DateTime.MinValue,
+            StartTime = slot.StartTime ?? TimeSpan.Zero,
+            EndTime = slot.EndTime ?? TimeSpan.Zero,
+            RequiredPasscode = slot.Passcode != null,
+            CreatedDate = slot.CreatedDate ?? DateTime.MinValue,
+            Message = slot.Message ?? "N/A",
+            Subject = slot.Subject?.Name ?? "N/A",
+            StudentLimit = slot.StudentLimit ?? 0,
+        };
+
+        private void dgvSlots_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Get the DataBoundItem
+                var dataBoundItem = dgvSlots.Rows[e.RowIndex].DataBoundItem;
+                if (dataBoundItem != null)
+                {
+                    frmEnrollInSlot frm = new frmEnrollInSlot(dataBoundItem);
+                    frm.Show();
+                }
+            }
+        }
+
         public void LoadSlotList()
         {
             try
             {
-                var slotList = _slotRepository.GetSlots();
+                var slotList = _slotRepository.FilterSlots(null, null, null, null, "Active");
+                var presentedSlotList = slotList.Select(slotProjection).ToList();
+
                 BindingSource source = new BindingSource();
-                source.DataSource = slotList;
+
+                int columnIndexToHide = 0;
+
+                source.DataSource = presentedSlotList;
                 dgvSlots.DataSource = source;
+                dgvSlots.Columns[columnIndexToHide].Visible = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error on load list of products: " + ex.Message, "Error");
+                MessageBox.Show("Error on load list of slots: " + ex.Message, "Error");
             }
         }
         private void btnClearText_Click(object sender, EventArgs e)
@@ -40,6 +78,7 @@ namespace MeetMyLecturerWinApp
             txtSubject.Text = "";
             startDatePicker.Value = DateTime.Now;
             endDatePicker.Value = DateTime.Now;
+            LoadSlotList();
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
@@ -50,9 +89,10 @@ namespace MeetMyLecturerWinApp
             DateTime endDate = endDatePicker.Value;
             if (startDate <= endDate)
             {
-                var searchResult = _slotRepository.FilterSlots(email, major, startDate, endDate);
+                var searchResult = _slotRepository.FilterSlots(email, major, startDate, endDate, "Active");
+                var presentedSlotList = searchResult.Select(slotProjection).ToList();
                 BindingSource source = new BindingSource();
-                source.DataSource = searchResult;
+                source.DataSource = presentedSlotList;
                 dgvSlots.DataSource = source;
             }
             else

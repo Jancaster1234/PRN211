@@ -61,6 +61,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
             label1.Size = new Size(104, 25);
@@ -94,6 +95,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.ForeColor = SystemColors.ControlLightLight;
             label2.Location = new Point(212, 44);
             label2.Name = "label2";
             label2.Size = new Size(31, 15);
@@ -103,6 +105,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.ForeColor = SystemColors.ControlLightLight;
             label3.Location = new Point(360, 44);
             label3.Name = "label3";
             label3.Size = new Size(27, 15);
@@ -112,6 +115,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.ForeColor = SystemColors.ButtonHighlight;
             label4.Location = new Point(20, 44);
             label4.Name = "label4";
             label4.Size = new Size(31, 15);
@@ -130,6 +134,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.ForeColor = SystemColors.ControlLightLight;
             label5.Location = new Point(20, 89);
             label5.Name = "label5";
             label5.Size = new Size(46, 15);
@@ -139,6 +144,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.ForeColor = SystemColors.ControlLightLight;
             label6.Location = new Point(20, 185);
             label6.Name = "label6";
             label6.Size = new Size(53, 15);
@@ -155,6 +161,7 @@
             // 
             // btnGenerate
             // 
+            btnGenerate.ForeColor = SystemColors.ActiveCaptionText;
             btnGenerate.Location = new Point(337, 272);
             btnGenerate.Name = "btnGenerate";
             btnGenerate.Size = new Size(156, 23);
@@ -174,6 +181,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.ForeColor = SystemColors.ControlLightLight;
             label7.Location = new Point(22, 276);
             label7.Name = "label7";
             label7.Size = new Size(56, 15);
@@ -183,6 +191,7 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.ForeColor = SystemColors.ControlLightLight;
             label8.Location = new Point(20, 135);
             label8.Name = "label8";
             label8.Size = new Size(78, 15);
@@ -198,6 +207,7 @@
             // 
             // btnSubmit
             // 
+            btnSubmit.ForeColor = SystemColors.ActiveCaptionText;
             btnSubmit.Location = new Point(328, 385);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(75, 23);
@@ -208,6 +218,7 @@
             // 
             // btnCancel
             // 
+            btnCancel.ForeColor = SystemColors.ActiveCaptionText;
             btnCancel.Location = new Point(418, 385);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(75, 23);
@@ -218,7 +229,9 @@
             // 
             // linkHide
             // 
+            linkHide.ActiveLinkColor = Color.White;
             linkHide.AutoSize = true;
+            linkHide.LinkColor = Color.Yellow;
             linkHide.Location = new Point(109, 303);
             linkHide.Name = "linkHide";
             linkHide.Size = new Size(32, 15);
@@ -230,6 +243,7 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.ForeColor = SystemColors.ControlLightLight;
             label9.Location = new Point(22, 342);
             label9.Name = "label9";
             label9.Size = new Size(39, 15);
@@ -250,6 +264,7 @@
             // rbInactive
             // 
             rbInactive.AutoSize = true;
+            rbInactive.ForeColor = SystemColors.ButtonHighlight;
             rbInactive.Location = new Point(131, 19);
             rbInactive.Name = "rbInactive";
             rbInactive.Size = new Size(66, 19);
@@ -261,6 +276,7 @@
             // rdActive
             // 
             rdActive.AutoSize = true;
+            rdActive.ForeColor = SystemColors.ButtonHighlight;
             rdActive.Location = new Point(6, 19);
             rdActive.Name = "rdActive";
             rdActive.Size = new Size(58, 19);
@@ -272,6 +288,7 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.ForeColor = SystemColors.ControlLightLight;
             label10.Location = new Point(348, 135);
             label10.Name = "label10";
             label10.Size = new Size(39, 15);
@@ -287,6 +304,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.ForeColor = SystemColors.ActiveCaptionText;
             btnDelete.Location = new Point(238, 385);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(75, 23);
@@ -299,6 +317,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(505, 420);
             Controls.Add(btnDelete);
             Controls.Add(txtRoom);
@@ -324,6 +343,7 @@
             Controls.Add(txtStart);
             Controls.Add(txtDate);
             Controls.Add(label1);
+            ForeColor = SystemColors.ActiveCaptionText;
             Name = "frmSlotDialog";
             Text = "frmSlotDialog";
             Load += frmSlotDialog_Load;

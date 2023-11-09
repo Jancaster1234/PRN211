@@ -30,6 +30,7 @@
         {
             flowPanel_items = new FlowLayoutPanel();
             panel_header = new Panel();
+            label2 = new Label();
             lbDateWeek = new Label();
             btnForward = new Button();
             btnBack = new Button();
@@ -51,7 +52,6 @@
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            label2 = new Label();
             panel_header.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -59,6 +59,7 @@
             // 
             // flowPanel_items
             // 
+            flowPanel_items.BackColor = Color.SlateBlue;
             flowPanel_items.Location = new Point(85, 129);
             flowPanel_items.Name = "flowPanel_items";
             flowPanel_items.Size = new Size(723, 426);
@@ -66,7 +67,7 @@
             // 
             // panel_header
             // 
-            panel_header.BackColor = SystemColors.GradientInactiveCaption;
+            panel_header.BackColor = Color.DarkSlateBlue;
             panel_header.Controls.Add(label2);
             panel_header.Controls.Add(lbDateWeek);
             panel_header.Controls.Add(btnForward);
@@ -75,14 +76,26 @@
             panel_header.Controls.Add(txtFilePath);
             panel_header.Controls.Add(btnSave);
             panel_header.Dock = DockStyle.Top;
+            panel_header.ForeColor = SystemColors.ActiveCaptionText;
             panel_header.Location = new Point(0, 0);
             panel_header.Name = "panel_header";
-            panel_header.Size = new Size(811, 86);
+            panel_header.Size = new Size(812, 86);
             panel_header.TabIndex = 7;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(12, 35);
+            label2.Name = "label2";
+            label2.Size = new Size(152, 15);
+            label2.TabIndex = 7;
+            label2.Text = "Import schedule from Excel";
             // 
             // lbDateWeek
             // 
             lbDateWeek.AutoSize = true;
+            lbDateWeek.ForeColor = SystemColors.Control;
             lbDateWeek.Location = new Point(632, 61);
             lbDateWeek.Name = "lbDateWeek";
             lbDateWeek.Size = new Size(122, 15);
@@ -91,6 +104,7 @@
             // 
             // btnForward
             // 
+            btnForward.ForeColor = SystemColors.ActiveCaptionText;
             btnForward.Location = new Point(770, 53);
             btnForward.Name = "btnForward";
             btnForward.Size = new Size(29, 30);
@@ -101,6 +115,7 @@
             // 
             // btnBack
             // 
+            btnBack.ForeColor = SystemColors.ActiveCaptionText;
             btnBack.Location = new Point(585, 53);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(29, 30);
@@ -129,6 +144,7 @@
             // 
             // btnSave
             // 
+            btnSave.ForeColor = SystemColors.ActiveCaptionText;
             btnSave.Location = new Point(474, 52);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
@@ -139,7 +155,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.BackColor = Color.MediumPurple;
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
@@ -150,7 +166,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 86);
             panel1.Name = "panel1";
-            panel1.Size = new Size(811, 43);
+            panel1.Size = new Size(812, 43);
             panel1.TabIndex = 8;
             // 
             // label7
@@ -219,7 +235,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.Coral;
+            panel2.BackColor = Color.MediumPurple;
             panel2.Controls.Add(label13);
             panel2.Controls.Add(label12);
             panel2.Controls.Add(label11);
@@ -288,20 +304,12 @@
             label8.TabIndex = 7;
             label8.Text = "7:00 - 8:30";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(12, 35);
-            label2.Name = "label2";
-            label2.Size = new Size(152, 15);
-            label2.TabIndex = 7;
-            label2.Text = "Import schedule from Excel";
-            // 
             // frmTeacherSchedule
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(811, 558);
+            BackColor = Color.SlateBlue;
+            ClientSize = new Size(812, 558);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(panel_header);

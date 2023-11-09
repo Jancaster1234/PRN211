@@ -77,7 +77,7 @@ namespace DataAccess
         public List<ScheduleRecord> GetAllScheduleRecords()
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            return db.ScheduleRecords.ToList();
+            return db.ScheduleRecords.Include(scheduleRecord => scheduleRecord.Teacher).ToList();
         }
 
         public void AddScheduleRecord(ScheduleRecord scheduleRecord)

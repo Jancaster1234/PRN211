@@ -36,7 +36,8 @@ namespace DataAccess
         public List<SlotRecord> GetAllSlotRecords()
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            return db.SlotRecords.ToList();
+            return db.SlotRecords.Include(slotRecord => slotRecord.Slot)
+                .Include(slotRecord => slotRecord.Student).ToList();
         }
 
         public void AddSlotRecord(SlotRecord slotRecord)

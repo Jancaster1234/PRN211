@@ -13,5 +13,9 @@ namespace Repository
         void UpdateUser(User user);
         void UpdateUserImage(User user, string imageName);
         List<User> FilterUsers(string? role, string? email, string? major, string? name);
+
+        void ChangeIsShowProfile(User user, bool status);
+
+        void ChangeIsShowSchedule(User user, bool status);
     }
 }

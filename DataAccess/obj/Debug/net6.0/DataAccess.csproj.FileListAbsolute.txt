@@ -46,3 +46,19 @@ D:\FPT\PRN211\GroupProject\PRN211\DataAccess\obj\Debug\net6.0\refint\DataAccess.
 D:\FPT\PRN211\GroupProject\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\FPT\PRN211\GroupProject\PRN211\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
 >>>>>>> d9186b570898db5abfdb8e9b8e2d8254f4bc1242
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+>>>>>>> 4c732e388f97fb96abf69b5b9ff75aa26707a2d4

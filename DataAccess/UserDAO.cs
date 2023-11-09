@@ -29,6 +29,11 @@ namespace DataAccess
             using var db = new FptuPrn211MeetMyLecturerContext();
             return db.Users.SingleOrDefault(m => m.Email.Equals(email) && m.Password.Equals(password));
         }
+        public User GetUserByEmail(string Email)
+        {
+            using var db = new FptuPrn211MeetMyLecturerContext();
+            return db.Users.SingleOrDefault(user => user.Email.Equals(Email));
+        }
 
         public User GetUserById(int userId)
         {
@@ -41,7 +46,7 @@ namespace DataAccess
             using (var db = new FptuPrn211MeetMyLecturerContext())
             {
                 // Start with all users in the database
-                var query = db.Users.AsQueryable();
+                var query = db.Users.Include(user => user.RoleNavigation).AsQueryable();
 
                 // Apply filters if provided
                 if (!string.IsNullOrEmpty(role))
@@ -71,7 +76,7 @@ namespace DataAccess
         public List<User> GetAllUsers()
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            return db.Users.ToList();
+            return db.Users.Include(user => user.RoleNavigation).ToList();
         }
 
         public void AddUser(User user)
@@ -102,10 +107,33 @@ namespace DataAccess
             db.Entry(user).State = EntityState.Modified;
             db.SaveChanges();
         }
-        public User GetUserByEmail(string Email)
+
+        public void ChangeIsShowProfile(User user, bool status)
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            return db.Users.SingleOrDefault(user => user.Email.Equals(Email));
+            var userFromDb = db.Users.Find(user.Id);
+            if (userFromDb != null)
+            {
+                userFromDb.IsShowProfile = status;
+                db.SaveChanges();
+            }
+            else
+            {
+            }
+        }
+
+        public void ChangeIsShowSchedule(User user, bool status)
+        {
+            using var db = new FptuPrn211MeetMyLecturerContext();
+            var userFromDb = db.Users.Find(user.Id);
+            if (userFromDb != null)
+            {
+                userFromDb.IsShowSchedule = status;
+                db.SaveChanges();
+            }
+            else
+            {
+            }
         }
     }
 }

@@ -47,6 +47,7 @@ public partial class FptuPrn211MeetMyLecturerContext : DbContext
     {
         optionsBuilder.UseSqlServer(GetConnectionString());
     }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ActionRecord>(entity =>
@@ -195,6 +196,9 @@ public partial class FptuPrn211MeetMyLecturerContext : DbContext
             entity.Property(e => e.Passcode)
                 .HasMaxLength(50)
                 .HasColumnName("passcode");
+            entity.Property(e => e.Room)
+                .HasMaxLength(50)
+                .HasColumnName("room");
             entity.Property(e => e.StartTime).HasColumnName("startTime");
             entity.Property(e => e.Status)
                 .HasMaxLength(50)

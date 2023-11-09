@@ -45,69 +45,73 @@
             // dgvSlots
             // 
             dgvSlots.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSlots.Location = new Point(37, 162);
+            dgvSlots.Location = new Point(32, 122);
+            dgvSlots.Margin = new Padding(3, 2, 3, 2);
             dgvSlots.Name = "dgvSlots";
             dgvSlots.RowHeadersWidth = 51;
             dgvSlots.RowTemplate.Height = 29;
             dgvSlots.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSlots.Size = new Size(718, 265);
+            dgvSlots.Size = new Size(628, 199);
             dgvSlots.TabIndex = 0;
             // 
             // TeacherEmail
             // 
             TeacherEmail.AutoSize = true;
-            TeacherEmail.Location = new Point(12, 31);
+            TeacherEmail.Location = new Point(10, 23);
             TeacherEmail.Name = "TeacherEmail";
-            TeacherEmail.Size = new Size(101, 20);
+            TeacherEmail.Size = new Size(79, 15);
             TeacherEmail.TabIndex = 1;
             TeacherEmail.Text = "Teacher Email";
             // 
             // Subject
             // 
             Subject.AutoSize = true;
-            Subject.Location = new Point(35, 75);
+            Subject.Location = new Point(31, 56);
             Subject.Name = "Subject";
-            Subject.Size = new Size(58, 20);
+            Subject.Size = new Size(46, 15);
             Subject.TabIndex = 2;
             Subject.Text = "Subject";
             // 
             // startDate
             // 
             startDate.AutoSize = true;
-            startDate.Location = new Point(424, 31);
+            startDate.Location = new Point(371, 23);
             startDate.Name = "startDate";
-            startDate.Size = new Size(70, 20);
+            startDate.Size = new Size(54, 15);
             startDate.TabIndex = 3;
             startDate.Text = "startDate";
             // 
             // endDate
             // 
             endDate.AutoSize = true;
-            endDate.Location = new Point(428, 75);
+            endDate.Location = new Point(374, 56);
             endDate.Name = "endDate";
-            endDate.Size = new Size(66, 20);
+            endDate.Size = new Size(51, 15);
             endDate.TabIndex = 4;
             endDate.Text = "endDate";
             // 
             // txtTeacher
             // 
-            txtTeacher.Location = new Point(117, 27);
+            txtTeacher.Location = new Point(102, 20);
+            txtTeacher.Margin = new Padding(3, 2, 3, 2);
             txtTeacher.Name = "txtTeacher";
-            txtTeacher.Size = new Size(231, 27);
+            txtTeacher.Size = new Size(203, 23);
             txtTeacher.TabIndex = 5;
             // 
             // txtSubject
             // 
-            txtSubject.Location = new Point(117, 72);
+            txtSubject.Location = new Point(102, 54);
+            txtSubject.Margin = new Padding(3, 2, 3, 2);
             txtSubject.Name = "txtSubject";
-            txtSubject.Size = new Size(231, 27);
+            txtSubject.Size = new Size(203, 23);
             txtSubject.TabIndex = 5;
             // 
             // btnClearText
             // 
-            btnClearText.Location = new Point(153, 120);
+            btnClearText.Location = new Point(134, 90);
+            btnClearText.Margin = new Padding(3, 2, 3, 2);
             btnClearText.Name = "btnClearText";
-            btnClearText.Size = new Size(94, 29);
+            btnClearText.Size = new Size(82, 22);
             btnClearText.TabIndex = 6;
             btnClearText.Text = "Clear Text";
             btnClearText.UseVisualStyleBackColor = true;
@@ -115,9 +119,10 @@
             // 
             // btnOK
             // 
-            btnOK.Location = new Point(424, 120);
+            btnOK.Location = new Point(371, 90);
+            btnOK.Margin = new Padding(3, 2, 3, 2);
             btnOK.Name = "btnOK";
-            btnOK.Size = new Size(94, 29);
+            btnOK.Size = new Size(82, 22);
             btnOK.TabIndex = 6;
             btnOK.Text = "OK";
             btnOK.UseVisualStyleBackColor = true;
@@ -125,23 +130,25 @@
             // 
             // startDatePicker
             // 
-            startDatePicker.Location = new Point(519, 31);
+            startDatePicker.Location = new Point(454, 23);
+            startDatePicker.Margin = new Padding(3, 2, 3, 2);
             startDatePicker.Name = "startDatePicker";
-            startDatePicker.Size = new Size(250, 27);
+            startDatePicker.Size = new Size(219, 23);
             startDatePicker.TabIndex = 7;
             // 
             // endDatePicker
             // 
-            endDatePicker.Location = new Point(519, 70);
+            endDatePicker.Location = new Point(454, 52);
+            endDatePicker.Margin = new Padding(3, 2, 3, 2);
             endDatePicker.Name = "endDatePicker";
-            endDatePicker.Size = new Size(250, 27);
+            endDatePicker.Size = new Size(219, 23);
             endDatePicker.TabIndex = 7;
             // 
             // frmStudent_SlotForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(endDatePicker);
             Controls.Add(startDatePicker);
             Controls.Add(btnOK);
@@ -153,6 +160,7 @@
             Controls.Add(Subject);
             Controls.Add(TeacherEmail);
             Controls.Add(dgvSlots);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmStudent_SlotForm";
             Text = "frmStudent_SlotForm";
             Load += frmStudent_SlotForm_Load;

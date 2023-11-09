@@ -42,9 +42,10 @@
             // 
             // btnClearText
             // 
-            btnClearText.Location = new Point(158, 149);
+            btnClearText.Location = new Point(138, 112);
+            btnClearText.Margin = new Padding(3, 2, 3, 2);
             btnClearText.Name = "btnClearText";
-            btnClearText.Size = new Size(94, 29);
+            btnClearText.Size = new Size(82, 22);
             btnClearText.TabIndex = 0;
             btnClearText.Text = "Clear Text";
             btnClearText.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@
             // 
             // btnOK
             // 
-            btnOK.Location = new Point(494, 149);
+            btnOK.Location = new Point(432, 112);
+            btnOK.Margin = new Padding(3, 2, 3, 2);
             btnOK.Name = "btnOK";
-            btnOK.Size = new Size(94, 29);
+            btnOK.Size = new Size(82, 22);
             btnOK.TabIndex = 22;
             btnOK.Text = "OK";
             btnOK.UseVisualStyleBackColor = true;
@@ -62,69 +64,78 @@
             // 
             // dgvTeachers
             // 
+            dgvTeachers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTeachers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTeachers.Location = new Point(32, 197);
+            dgvTeachers.Location = new Point(28, 148);
+            dgvTeachers.Margin = new Padding(3, 2, 3, 2);
             dgvTeachers.Name = "dgvTeachers";
             dgvTeachers.ReadOnly = true;
             dgvTeachers.RowHeadersWidth = 51;
             dgvTeachers.RowTemplate.Height = 29;
             dgvTeachers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTeachers.Size = new Size(723, 241);
+            dgvTeachers.Size = new Size(633, 181);
             dgvTeachers.TabIndex = 23;
             // 
             // Name
             // 
             Name.AutoSize = true;
-            Name.Location = new Point(25, 24);
+            Name.ForeColor = SystemColors.ControlLightLight;
+            Name.Location = new Point(22, 18);
             Name.Name = "Name";
-            Name.Size = new Size(49, 20);
+            Name.Size = new Size(39, 15);
             Name.TabIndex = 24;
             Name.Text = "Name";
             // 
             // Email
             // 
             Email.AutoSize = true;
-            Email.Location = new Point(25, 68);
+            Email.ForeColor = SystemColors.ControlLightLight;
+            Email.Location = new Point(22, 51);
             Email.Name = "Email";
-            Email.Size = new Size(46, 20);
+            Email.Size = new Size(36, 15);
             Email.TabIndex = 25;
             Email.Text = "Email";
             // 
             // Major
             // 
             Major.AutoSize = true;
-            Major.Location = new Point(392, 24);
+            Major.ForeColor = SystemColors.ControlLightLight;
+            Major.Location = new Point(343, 18);
             Major.Name = "Major";
-            Major.Size = new Size(48, 20);
+            Major.Size = new Size(38, 15);
             Major.TabIndex = 26;
             Major.Text = "Major";
             // 
             // txtName
             // 
-            txtName.Location = new Point(106, 25);
+            txtName.Location = new Point(93, 19);
+            txtName.Margin = new Padding(3, 2, 3, 2);
             txtName.Name = "txtName";
-            txtName.Size = new Size(203, 27);
+            txtName.Size = new Size(178, 23);
             txtName.TabIndex = 27;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(106, 68);
+            txtEmail.Location = new Point(93, 51);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(203, 27);
+            txtEmail.Size = new Size(178, 23);
             txtEmail.TabIndex = 27;
             // 
             // txtMajor
             // 
-            txtMajor.Location = new Point(460, 24);
+            txtMajor.Location = new Point(402, 18);
+            txtMajor.Margin = new Padding(3, 2, 3, 2);
             txtMajor.Name = "txtMajor";
-            txtMajor.Size = new Size(203, 27);
+            txtMajor.Size = new Size(178, 23);
             txtMajor.TabIndex = 27;
             // 
             // frmStudentTeacherForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.DarkSlateBlue;
+            ClientSize = new Size(700, 338);
             Controls.Add(txtMajor);
             Controls.Add(txtEmail);
             Controls.Add(txtName);
@@ -134,6 +145,8 @@
             Controls.Add(dgvTeachers);
             Controls.Add(btnOK);
             Controls.Add(btnClearText);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "frmStudentTeacherForm";
             Text = "frmStudentTeacherForm";
             Load += frmStudentTeacherForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvTeachers).EndInit();

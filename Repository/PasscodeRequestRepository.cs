@@ -31,5 +31,10 @@ namespace Repository
         {
             PasscodeRequestDAO.Instance.DeletePasscodeRequest(passcodeRequest);
         }
+
+        public List<PasscodeRequest> FilterPasscodeRequests(int? studentId, DateTime? startCreatedDate, DateTime? endCreatedDate, string? status, DateTime? startReviewedDate, DateTime? endReviewedDate, int? slotId)
+        {
+            return PasscodeRequestDAO.Instance.FilterPasscodeRequests(studentId, startCreatedDate, endCreatedDate, status, startReviewedDate, endReviewedDate, slotId);
+        }
     }
 }

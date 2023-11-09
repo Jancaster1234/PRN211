@@ -52,3 +52,21 @@ D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\refint\Repository.
 D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\Repository.pdb
 D:\FPT\PRN211\GroupProject\PRN211\Repository\obj\Debug\net6.0\ref\Repository.dll
 >>>>>>> d9186b570898db5abfdb8e9b8e2d8254f4bc1242
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\bin\Debug\net6.0\Repository.deps.json
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\bin\Debug\net6.0\Repository.dll
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\bin\Debug\net6.0\Repository.pdb
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\bin\Debug\net6.0\BusinessObject.dll
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\bin\Debug\net6.0\BusinessObject.pdb
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\obj\Debug\net6.0\Repository.csproj.AssemblyReference.cache
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\obj\Debug\net6.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\obj\Debug\net6.0\Repository.AssemblyInfoInputs.cache
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\obj\Debug\net6.0\Repository.AssemblyInfo.cs
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\obj\Debug\net6.0\Repository.csproj.CoreCompileInputs.cache
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\obj\Debug\net6.0\Repository.csproj.CopyComplete
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\obj\Debug\net6.0\Repository.dll
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\obj\Debug\net6.0\refint\Repository.dll
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\obj\Debug\net6.0\Repository.pdb
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\Repository\obj\Debug\net6.0\ref\Repository.dll
+>>>>>>> 4c732e388f97fb96abf69b5b9ff75aa26707a2d4
