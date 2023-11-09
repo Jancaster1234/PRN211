@@ -28,12 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmAdminActionRecord";
+            dgvActionRecords = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvActionRecords).BeginInit();
+            SuspendLayout();
+            // 
+            // dgvActionRecords
+            // 
+            dgvActionRecords.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvActionRecords.Location = new Point(40, 38);
+            dgvActionRecords.Name = "dgvActionRecords";
+            dgvActionRecords.RowHeadersWidth = 51;
+            dgvActionRecords.RowTemplate.Height = 29;
+            dgvActionRecords.Size = new Size(721, 375);
+            dgvActionRecords.TabIndex = 1;
+            // 
+            // frmAdminActionRecord
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dgvActionRecords);
+            Name = "frmAdminActionRecord";
+            Text = "frmAdminActionRecord";
+            Load += frmAdminActionRecord_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvActionRecords).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dgvActionRecords;
     }
 }

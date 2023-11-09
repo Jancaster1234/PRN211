@@ -16,13 +16,28 @@
     <Compile Update="Admin form\frmManageTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmLogin.cs">
+    <Compile Update="frmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmLogin2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Student form\frmEnrollInSlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Student form\frmMainStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Student form\frmShowTeacherProfile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Student form\frmStudentActionRecordForm.cs">
@@ -41,6 +56,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Student form\frmStudent_SlotForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Teacher form\frmChooseSlotForMeetingRequest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Teacher form\frmMainTeacher.cs">

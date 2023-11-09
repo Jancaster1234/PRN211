@@ -14,5 +14,9 @@ namespace Repository
         List<User> FilterUsers(string? role, string? email, string? major, string? name);
 
         User GetUserByEmail(string email);
+
+        void ChangeIsShowProfile(User user, bool status);
+
+        void ChangeIsShowSchedule(User user, bool status);
     }
 }

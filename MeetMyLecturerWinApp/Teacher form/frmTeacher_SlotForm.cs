@@ -39,6 +39,7 @@ namespace MeetMyLecturerWinApp.Teacher_form
             txtSubject.Text = "";
             startDatePicker.Value = DateTime.Now;
             endDatePicker.Value = DateTime.Now;
+            LoadSlotList();
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
@@ -49,7 +50,7 @@ namespace MeetMyLecturerWinApp.Teacher_form
             DateTime endDate = endDatePicker.Value;
             if (startDate <= endDate)
             {
-                var searchResult = _slotRepository.FilterSlots(email, major, startDate, endDate);
+                var searchResult = _slotRepository.FilterSlots(email, major, startDate, endDate, null);
                 BindingSource source = new BindingSource();
                 source.DataSource = searchResult;
                 dgvSlots.DataSource = source;

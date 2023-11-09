@@ -29,7 +29,7 @@ namespace MeetMyLecturerWinApp.Student_form
             {
                 frmStudent_SlotForm = new frmStudent_SlotForm();
                 frmStudent_SlotForm.MdiParent = this;
-                frmStudent_SlotForm.FormClosed += new FormClosedEventHandler(FMembers_FormClosed);
+                frmStudent_SlotForm.FormClosed += new FormClosedEventHandler(SlotForm_FormClosed);
                 frmStudent_SlotForm.Show();
             }
             else
@@ -38,7 +38,7 @@ namespace MeetMyLecturerWinApp.Student_form
             }
         }
 
-        private void FMembers_FormClosed(object sender, FormClosedEventArgs e)
+        private void SlotForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             frmStudent_SlotForm = null;
         }
@@ -48,7 +48,7 @@ namespace MeetMyLecturerWinApp.Student_form
             {
                 studentMeetingRequestForm = new frmStudentMeetingRequestForm();
                 studentMeetingRequestForm.MdiParent = this;
-                studentMeetingRequestForm.FormClosed += new FormClosedEventHandler(FMembers_FormClosed);
+                studentMeetingRequestForm.FormClosed += new FormClosedEventHandler(meetingRequestForm_FormClosed);
                 studentMeetingRequestForm.Show();
             }
             else
@@ -63,7 +63,7 @@ namespace MeetMyLecturerWinApp.Student_form
             {
                 fPasscodeRequests = new frmStudentPasscodeRequestForm();
                 fPasscodeRequests.MdiParent = this;
-                fPasscodeRequests.FormClosed += new FormClosedEventHandler(FMembers_FormClosed);
+                fPasscodeRequests.FormClosed += new FormClosedEventHandler(passcodeRequestForm_FormClosed);
                 fPasscodeRequests.Show();
             }
             else
@@ -78,7 +78,7 @@ namespace MeetMyLecturerWinApp.Student_form
             {
                 frmStudentProfile = new frmStudentProfile();
                 frmStudentProfile.MdiParent = this;
-                frmStudentProfile.FormClosed += new FormClosedEventHandler(FMembers_FormClosed);
+                frmStudentProfile.FormClosed += new FormClosedEventHandler(profileForm_FormClosed);
                 frmStudentProfile.Show();
             }
             else
@@ -93,7 +93,7 @@ namespace MeetMyLecturerWinApp.Student_form
             {
                 fTeacher = new frmStudentTeacherForm();
                 fTeacher.MdiParent = this;
-                fTeacher.FormClosed += new FormClosedEventHandler(FMembers_FormClosed);
+                fTeacher.FormClosed += new FormClosedEventHandler(teacherForm_FormClosed);
                 fTeacher.Show();
             }
             else
@@ -128,7 +128,7 @@ namespace MeetMyLecturerWinApp.Student_form
             {
                 frmStudentActionRecordForm = new frmStudentActionRecordForm();
                 frmStudentActionRecordForm.MdiParent = this;
-                frmStudentActionRecordForm.FormClosed += new FormClosedEventHandler(FMembers_FormClosed);
+                frmStudentActionRecordForm.FormClosed += new FormClosedEventHandler(actionRecordForm_FormClosed);
                 frmStudentActionRecordForm.Show();
             }
             else

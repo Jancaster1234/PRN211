@@ -39,6 +39,13 @@ namespace DataAccess
             using var db = new FptuPrn211MeetMyLecturerContext();
             return db.Slots.ToList();
         }
+        public List<Slot> GetSlotsWithRelatedData()
+        {
+            using var db = new FptuPrn211MeetMyLecturerContext();
+            return db.Slots.Include(slot => slot.Teacher)
+                          .Include(slot => slot.Subject)
+                          .ToList();
+        }
 
         public void AddSlot(Slot slot)
         {
@@ -61,12 +68,15 @@ namespace DataAccess
             db.SaveChanges();
         }
 
-        public List<Slot> FilterSlots(string? teacherEmail, string? subject, DateTime? startDate, DateTime? endDate)
+        public List<Slot> FilterSlots(string? teacherEmail, string? subject, DateTime? startDate, DateTime? endDate, string? status)
         {
             using (var db = new FptuPrn211MeetMyLecturerContext())
             {
                 // Start with all users in the database
-                var query = db.Slots.AsQueryable();
+                var query = db.Slots
+    .Include(slot => slot.Subject)
+    .Include(slot => slot.Teacher)
+    .AsQueryable();
 
                 // Apply filters if provided
                 if (!string.IsNullOrEmpty(teacherEmail))
@@ -85,6 +95,10 @@ namespace DataAccess
                 if (endDate != null)
                 {
                     query = query.Where(slot => slot.Date <= endDate);
+                }
+                if (!string.IsNullOrEmpty(status))
+                {
+                    query = query.Where(slot => slot.Status == status);
                 }
                 // Execute the query and return the filtered users as a list
                 List<Slot> filteredSlots = query.ToList();

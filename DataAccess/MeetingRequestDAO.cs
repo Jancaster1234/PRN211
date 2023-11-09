@@ -37,7 +37,7 @@ namespace DataAccess
         public List<MeetingRequest> GetAllMeetingRequests()
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            return db.MeetingRequests.ToList();
+            return db.MeetingRequests.Include(m => m.Student).Include(m => m.Teacher).ToList();
         }
 
         public void AddMeetingRequest(MeetingRequest meetingRequest)
@@ -65,7 +65,7 @@ namespace DataAccess
         {
             using (var db = new FptuPrn211MeetMyLecturerContext())
             {
-                var query = db.MeetingRequests.AsQueryable();
+                var query = db.MeetingRequests.Include(m => m.Student).Include(m => m.Teacher).AsQueryable();
 
                 if (userId.HasValue && userId > 0)
                 {

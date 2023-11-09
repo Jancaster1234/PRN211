@@ -62,6 +62,7 @@
             // 
             // dgvTeachers
             // 
+            dgvTeachers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTeachers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTeachers.Location = new Point(32, 197);
             dgvTeachers.Name = "dgvTeachers";

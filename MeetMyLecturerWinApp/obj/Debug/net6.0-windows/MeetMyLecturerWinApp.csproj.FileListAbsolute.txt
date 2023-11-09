@@ -142,10 +142,15 @@ C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Admin_form.frmMainAdmin.resources
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Admin_form.frmManageStudent.resources
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Admin_form.frmManageTeacher.resources
-C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmLogin.resources
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmForgotPassword.resources
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmLogIn.resources
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmLogin2.resources
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmMain.resources
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmRegister.resources
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Properties.Resources.resources
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Student_form.frmEnrollInSlot.resources
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Student_form.frmMainStudent.resources
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Student_form.frmShowTeacherProfile.resources
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmStudentActionRecordForm.resources
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmStudentMeetingRequestForm.resources
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.frmStudentPasscodeRequestForm.resources
@@ -169,3 +174,4 @@ C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.pdb
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.genruntimeconfig.cache
 C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\ref\MeetMyLecturerWinApp.dll
+C:\Users\Thinkpad T14\Desktop\clone\PRN211\MeetMyLecturerWinApp\obj\Debug\net6.0-windows\MeetMyLecturerWinApp.Teacher_form.frmChooseSlotForMeetingRequest.resources

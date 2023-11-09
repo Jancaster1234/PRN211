@@ -43,20 +43,20 @@
             dateTimePicker4 = new DateTimePicker();
             btnClearText = new Button();
             btnOK = new Button();
+            MessageIsListEmpty = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvMeetingRequests).BeginInit();
             SuspendLayout();
             // 
             // dgvMeetingRequests
             // 
             dgvMeetingRequests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMeetingRequests.Location = new Point(64, 231);
+            dgvMeetingRequests.Location = new Point(18, 233);
             dgvMeetingRequests.Name = "dgvMeetingRequests";
             dgvMeetingRequests.RowHeadersWidth = 51;
             dgvMeetingRequests.RowTemplate.Height = 29;
             dgvMeetingRequests.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMeetingRequests.Size = new Size(688, 168);
+            dgvMeetingRequests.Size = new Size(759, 205);
             dgvMeetingRequests.TabIndex = 0;
-            dgvMeetingRequests.CellContentClick += dgvMeetingRequests_CellContentClick;
             // 
             // startCreatedDate
             // 
@@ -172,11 +172,23 @@
             btnOK.Text = "OK";
             btnOK.UseVisualStyleBackColor = true;
             // 
+            // MessageIsListEmpty
+            // 
+            MessageIsListEmpty.AutoSize = true;
+            MessageIsListEmpty.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            MessageIsListEmpty.ForeColor = Color.IndianRed;
+            MessageIsListEmpty.Location = new Point(34, 247);
+            MessageIsListEmpty.Name = "MessageIsListEmpty";
+            MessageIsListEmpty.Size = new Size(339, 35);
+            MessageIsListEmpty.TabIndex = 6;
+            MessageIsListEmpty.Text = "You have no meeting request";
+            // 
             // frmStudentMeetingRequestForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(815, 450);
+            Controls.Add(MessageIsListEmpty);
             Controls.Add(btnOK);
             Controls.Add(btnClearText);
             Controls.Add(dateTimePicker4);
@@ -217,5 +229,6 @@
         private DateTimePicker dateTimePicker4;
         private Button btnClearText;
         private Button btnOK;
+        private Label MessageIsListEmpty;
     }
 }

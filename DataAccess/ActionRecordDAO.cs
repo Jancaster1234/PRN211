@@ -37,7 +37,7 @@ namespace DataAccess
         public List<ActionRecord> GetAllActionRecords()
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            return db.ActionRecords.ToList();
+            return db.ActionRecords.Include(a => a.User).ToList();
         }
 
         public void AddActionRecord(ActionRecord actionRecord)
@@ -64,7 +64,7 @@ namespace DataAccess
         {
             using (var db = new FptuPrn211MeetMyLecturerContext())
             {
-                var query = db.ActionRecords.AsQueryable();
+                var query = db.ActionRecords.Include(a => a.User).AsQueryable();
 
                 if (userId.HasValue && userId > 0)
                 {

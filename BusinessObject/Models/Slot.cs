@@ -27,6 +27,8 @@ public partial class Slot
 
     public int? StudentLimit { get; set; }
 
+    public string? Room { get; set; }
+
     public virtual ICollection<PasscodeRequest> PasscodeRequests { get; set; } = new List<PasscodeRequest>();
 
     public virtual ICollection<SlotRecord> SlotRecords { get; set; } = new List<SlotRecord>();

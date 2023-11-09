@@ -1,4 +1,6 @@
-﻿using Repository;
+﻿using BusinessObject.Models;
+using MeetMyLecturerWinApp.Student_form;
+using Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace MeetMyLecturerWinApp
 {
@@ -17,16 +20,63 @@ namespace MeetMyLecturerWinApp
         public frmStudentTeacherForm()
         {
             InitializeComponent();
+            dgvTeachers.CellContentDoubleClick += dgvTeachers_CellContentDoubleClick;
+        }
+        private readonly Func<User, object> teacherProjection = teacher => new
+        {
+            Id = teacher.Id,
+            Teacher = teacher.Name,
+            TeacherEmail = teacher.Email ?? "N/A",
+            Major = teacher.Major,
+            Info = teacher.Info,
+        };
+
+        private void dgvTeachers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Get the DataBoundItem
+                var dataBoundItem = dgvTeachers.Rows[e.RowIndex].DataBoundItem;
+                if (dataBoundItem != null)
+                {
+                    int id = GetSelectedSlotId(dataBoundItem);
+                    User teacher = _userRepository.GetUser(id);
+                    if (teacher != null)
+                    {
+                        frmShowTeacherProfile frm = new frmShowTeacherProfile(teacher);
+                        frm.Show();
+                    }
+                }
+            }
         }
 
+        private int GetSelectedSlotId(Object selectRow)
+        {
+            var idProperty = selectRow.GetType().GetProperty("Id");
+
+            if (idProperty != null && int.TryParse(idProperty.GetValue(selectRow)?.ToString(), out int id))
+            {
+                return id;
+            }
+
+            return -1;
+        }
         public void LoadTeacherList()
         {
             try
             {
                 var teacherList = _userRepository.FilterUsers("teacher", null, null, null);
+
+                var presentedTeacherList = teacherList.Select(teacherProjection).ToList();
+
                 BindingSource source = new BindingSource();
-                source.DataSource = teacherList;
+
+                int columnIndexToHide = 0;
+
+                source.DataSource = presentedTeacherList;
                 dgvTeachers.DataSource = source;
+
+                dgvTeachers.Columns[columnIndexToHide].Visible = false;
             }
             catch (Exception ex)
             {
@@ -38,6 +88,7 @@ namespace MeetMyLecturerWinApp
             txtEmail.Text = "";
             txtMajor.Text = "";
             txtName.Text = "";
+            LoadTeacherList();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -51,10 +102,17 @@ namespace MeetMyLecturerWinApp
             // Call the search method in _productRepository (you need to implement this method in ProductDAO)
             var searchResult = _userRepository.FilterUsers("teacher", email, major, name);
 
+            var presentedTeacherList = searchResult.Select(teacherProjection).ToList();
+
             // You can update the DataGridView with the search results
             BindingSource source = new BindingSource();
-            source.DataSource = searchResult;
+
+            int columnIndexToHide = 0;
+
+            source.DataSource = presentedTeacherList;
             dgvTeachers.DataSource = source;
+
+            dgvTeachers.Columns[columnIndexToHide].Visible = false;
         }
 
         private int? GetNullableIntValue(string input)

@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             dgvActionRecords = new DataGridView();
+            MessageIsListEmpty = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvActionRecords).BeginInit();
             SuspendLayout();
             // 
             // dgvActionRecords
             // 
+            dgvActionRecords.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvActionRecords.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvActionRecords.Location = new Point(41, 49);
             dgvActionRecords.Name = "dgvActionRecords";
@@ -41,22 +43,37 @@
             dgvActionRecords.RowTemplate.Height = 29;
             dgvActionRecords.Size = new Size(721, 375);
             dgvActionRecords.TabIndex = 0;
+            dgvActionRecords.CellContentClick += dgvActionRecords_CellContentClick;
+            // 
+            // MessageIsListEmpty
+            // 
+            MessageIsListEmpty.AutoSize = true;
+            MessageIsListEmpty.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            MessageIsListEmpty.ForeColor = Color.IndianRed;
+            MessageIsListEmpty.Location = new Point(62, 75);
+            MessageIsListEmpty.Name = "MessageIsListEmpty";
+            MessageIsListEmpty.Size = new Size(306, 35);
+            MessageIsListEmpty.TabIndex = 7;
+            MessageIsListEmpty.Text = "You have no action record";
             // 
             // frmStudentActionRecordForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(MessageIsListEmpty);
             Controls.Add(dgvActionRecords);
             Name = "frmStudentActionRecordForm";
             Text = "frmStudentActionRecordForm";
             Load += frmStudentActionRecordForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvActionRecords).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private DataGridView dgvActionRecords;
+        private Label MessageIsListEmpty;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Repository;
+﻿using BusinessObject.Models;
+using Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,14 +20,37 @@ namespace MeetMyLecturerWinApp.Teacher_form
             InitializeComponent();
         }
 
+        private readonly Func<ActionRecord, object> actionRecordProjection = actionRecord => new
+        {
+            Id = actionRecord.Id,
+            Action = actionRecord.Action,
+            CreatedDate = actionRecord.CreatedTime,
+        };
+
         public void LoadActionRecordList()
         {
             try
             {
+                MessageIsListEmpty.Visible = false;
+
                 var actionRecordList = _actionRecordRepository.FilterActionRecords(CurrentUser.Current.Id);
+                var presentedActionRecordList = actionRecordList.Select(actionRecordProjection).ToList();
+
+                int columnIndexToHide = 0;
+
                 BindingSource source = new BindingSource();
-                source.DataSource = actionRecordList;
-                dgvActionRecords.DataSource = source;
+                source.DataSource = presentedActionRecordList;
+
+                if (source.Count > 0)
+                {
+                    dgvActionRecords.DataSource = source;
+                    dgvActionRecords.Columns[columnIndexToHide].Visible = false;
+                }
+                else
+                {
+                    dgvActionRecords.DataSource = null;
+                    MessageIsListEmpty.Visible = true;
+                }
             }
             catch (Exception ex)
             {

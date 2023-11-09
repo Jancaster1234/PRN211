@@ -43,6 +43,7 @@
             endCreatedDate = new Label();
             startCreatedDate = new Label();
             dgvMeetingRequests = new DataGridView();
+            MessageIsListEmpty = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvMeetingRequests).BeginInit();
             SuspendLayout();
             // 
@@ -171,11 +172,23 @@
             dgvMeetingRequests.Size = new Size(688, 168);
             dgvMeetingRequests.TabIndex = 6;
             // 
+            // MessageIsListEmpty
+            // 
+            MessageIsListEmpty.AutoSize = true;
+            MessageIsListEmpty.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            MessageIsListEmpty.ForeColor = Color.IndianRed;
+            MessageIsListEmpty.Location = new Point(83, 263);
+            MessageIsListEmpty.Name = "MessageIsListEmpty";
+            MessageIsListEmpty.Size = new Size(339, 35);
+            MessageIsListEmpty.TabIndex = 21;
+            MessageIsListEmpty.Text = "You have no meeting request";
+            // 
             // frmTeacherMeetingRequestForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(MessageIsListEmpty);
             Controls.Add(btnOK);
             Controls.Add(btnClearText);
             Controls.Add(dateTimePicker4);
@@ -216,5 +229,6 @@
         private Label endCreatedDate;
         private Label startCreatedDate;
         private DataGridView dgvMeetingRequests;
+        private Label MessageIsListEmpty;
     }
 }

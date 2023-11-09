@@ -36,7 +36,7 @@ namespace DataAccess
         public List<PasscodeRequest> GetAllPasscodeRequests()
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            return db.PasscodeRequests.ToList();
+            return db.PasscodeRequests.Include(p => p.Slot).Include(p => p.Student).ToList();
         }
 
         public void AddPasscodeRequest(PasscodeRequest passcodeRequest)
@@ -63,7 +63,7 @@ namespace DataAccess
         {
             using (var db = new FptuPrn211MeetMyLecturerContext())
             {
-                var query = db.PasscodeRequests.AsQueryable();
+                var query = db.PasscodeRequests.Include(p => p.Slot).Include(p => p.Student).AsQueryable();
 
                 if (studentId.HasValue && studentId > 0)
                 {

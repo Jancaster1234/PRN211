@@ -1,19 +1,14 @@
-﻿using MeetMyLecturerWinApp.Student_form;
-using Repository;
-using MeetMyLecturerWinApp.Teacher_form;
-using MeetMyLecturerWinApp.Admin_form;
-
-namespace MeetMyLecturerWinApp
+﻿namespace MeetMyLecturerWinApp
 {
-    partial class frmLogin
+    partial class frmLogIn
     {
         /// <summary>
-        /// Required designer variable.
+        ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        IUserRepository _userRepository = new UserRepository();
+
         /// <summary>
-        /// Clean up any resources being used.
+        ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -24,117 +19,141 @@ namespace MeetMyLecturerWinApp
             }
             base.Dispose(disposing);
         }
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            var tmp = _userRepository.CheckLogin(txtEmail.Text, txtPassword.Text);
-            if (tmp != null)
-            {
-                CurrentUser.SetCurrentUser(tmp);
-                if (tmp.Role == 1)
-                {
-                    frmMainAdmin f = new frmMainAdmin();
-                    f.Show();
-                }
-                else if (tmp.Role == 2)
-                {
-                    frmMainTeacher f = new frmMainTeacher();
-                    f.Show();
-                }
-                else if (tmp.Role == 3)
-                {
-                    frmMainStudent f = new frmMainStudent();
-                    f.Show();
-                }
-            }
-            else
-            {
-                // Neither admin nor user, show error message
-                MessageBox.Show("You have no permission to do this function!", "MeetMyLecturer");
-            }
-        }
 
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            Email = new Label();
+            pictureBox1 = new PictureBox();
             txtEmail = new TextBox();
-            Password = new Label();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             txtPassword = new TextBox();
-            btnLogin = new Button();
+            linkForgetPass = new LinkLabel();
+            linkRegister = new LinkLabel();
+            SignInButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
-            // Email
+            // pictureBox1
             // 
-            Email.AutoSize = true;
-            Email.Location = new Point(100, 57);
-            Email.Name = "Email";
-            Email.Size = new Size(49, 20);
-            Email.TabIndex = 2;
-            Email.Text = "Email:";
+            pictureBox1.Image = new Bitmap("C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\MeetMyLecturerWinApp\\Resource\\Users1.gif");
+            pictureBox1.Location = new Point(91, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(243, 180);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(270, 57);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.Location = new Point(150, 212);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(135, 27);
-            txtEmail.TabIndex = 4;
+            txtEmail.Size = new Size(184, 27);
+            txtEmail.TabIndex = 1;
             // 
-            // Password
+            // pictureBox2
             // 
-            Password.AutoSize = true;
-            Password.Location = new Point(100, 123);
-            Password.Name = "Password";
-            Password.Size = new Size(73, 20);
-            Password.TabIndex = 5;
-            Password.Text = "Password:";
+            pictureBox2.Image = new Bitmap("C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\MeetMyLecturerWinApp\\Resource\\account.png");
+            pictureBox2.Location = new Point(91, 210);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(29, 29);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = new Bitmap("C:\\Users\\Thinkpad T14\\Desktop\\clone\\PRN211\\MeetMyLecturerWinApp\\Resource\\2639882_password_icon.png"); 
+            pictureBox3.Location = new Point(91, 264);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(29, 29);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(270, 132);
-            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.Location = new Point(150, 266);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(135, 27);
-            txtPassword.TabIndex = 6;
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(184, 27);
+            txtPassword.TabIndex = 3;
             // 
-            // btnLogin
+            // linkForgetPass
             // 
-            btnLogin.Location = new Point(288, 222);
-            btnLogin.Margin = new Padding(3, 4, 3, 4);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(86, 31);
-            btnLogin.TabIndex = 7;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = true;
-            btnLogin.Click += btnLogin_Click;
+            linkForgetPass.AutoSize = true;
+            linkForgetPass.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            linkForgetPass.Location = new Point(74, 315);
+            linkForgetPass.Name = "linkForgetPass";
+            linkForgetPass.Size = new Size(138, 19);
+            linkForgetPass.TabIndex = 5;
+            linkForgetPass.TabStop = true;
+            linkForgetPass.Text = "Forgotten Password?";
+            linkForgetPass.LinkClicked += linkForgetPass_LinkClicked;
             // 
-            // frmLogin
+            // linkRegister
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            linkRegister.AutoSize = true;
+            linkRegister.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            linkRegister.Location = new Point(291, 315);
+            linkRegister.Name = "linkRegister";
+            linkRegister.Size = new Size(58, 19);
+            linkRegister.TabIndex = 6;
+            linkRegister.TabStop = true;
+            linkRegister.Text = "Register";
+            linkRegister.LinkClicked += linkRegister_LinkClicked;
+            // 
+            // SignInButton
+            // 
+            SignInButton.Location = new Point(166, 358);
+            SignInButton.Name = "SignInButton";
+            SignInButton.Size = new Size(85, 29);
+            SignInButton.TabIndex = 7;
+            SignInButton.Text = "Sign In";
+            SignInButton.UseVisualStyleBackColor = true;
+            SignInButton.Click += SignInButton_Click;
+            // 
+            // frmLogIn
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnLogin);
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(444, 399);
+            Controls.Add(SignInButton);
+            Controls.Add(linkRegister);
+            Controls.Add(linkForgetPass);
+            Controls.Add(pictureBox3);
             Controls.Add(txtPassword);
-            Controls.Add(Password);
+            Controls.Add(pictureBox2);
             Controls.Add(txtEmail);
-            Controls.Add(Email);
-            Name = "frmLogin";
+            Controls.Add(pictureBox1);
+            Name = "frmLogIn";
             Text = "frmLogin";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label Email;
+        private PictureBox pictureBox1;
         private TextBox txtEmail;
-        private Label Password;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
         private TextBox txtPassword;
-        private Button btnLogin;
+        private LinkLabel linkForgetPass;
+        private LinkLabel linkRegister;
+        private Button SignInButton;
     }
 }
