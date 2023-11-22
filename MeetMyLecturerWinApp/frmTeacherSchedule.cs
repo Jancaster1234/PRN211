@@ -122,7 +122,7 @@ namespace MeetMyLecturerWinApp
                 {
                     count += 1;
                     // Skip the last row if it is the new row    
-
+                    //
                     // Retrieve the values from the row
                     if (count == 1)
                     {
