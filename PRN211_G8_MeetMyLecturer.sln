@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{9204B3E4-BC4C-4E39-91FD-ACA3F6016EDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetMyLecturerWinApp", "MeetMyLecturerWinApp\MeetMyLecturerWinApp.csproj", "{7057FBD1-560F-4E8A-845C-D470955892A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeetMyLecturerWinApp", "MeetMyLecturerWinApp\MeetMyLecturerWinApp.csproj", "{7057FBD1-560F-4E8A-845C-D470955892A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

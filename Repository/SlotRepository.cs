@@ -2,6 +2,7 @@
 using DataAccess;
 using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace Repository
 {
@@ -30,6 +31,20 @@ namespace Repository
         public void DeleteSlot(Slot slot)
         {
             SlotDAO.Instance.DeleteSlot(slot);
+        }
+        public List<Slot> FilterSlots(string? teacherEmail, string? subject, DateTime? startDate, DateTime? endDate, string? status)
+        {
+            return SlotDAO.Instance.FilterSlots(teacherEmail, subject, startDate, endDate, status);
+        }
+
+        public List<Slot> GetSlotsWithRelatedData()
+        {
+            return SlotDAO.Instance.GetSlotsWithRelatedData();
+        }
+
+        public Slot getSlot(int teacherId, DateTime date, TimeSpan start)
+        {
+            return SlotDAO.Instance.GetSlot(teacherId, date, start);
         }
     }
 }

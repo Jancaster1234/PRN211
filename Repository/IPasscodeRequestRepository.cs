@@ -11,5 +11,7 @@ namespace Repository
         void AddPasscodeRequest(PasscodeRequest passcodeRequest);
         void UpdatePasscodeRequest(PasscodeRequest passcodeRequest);
         void DeletePasscodeRequest(PasscodeRequest passcodeRequest);
+
+        List<PasscodeRequest> FilterPasscodeRequests(int? studentId, DateTime? startCreatedDate, DateTime? endCreatedDate, string? status, DateTime? startReviewedDate, DateTime? endReviewedDate, int? slotId);
     }
 }

@@ -34,14 +34,39 @@ namespace DataAccess
             return db.ScheduleRecords.Find(scheduleRecordId);
         }
 
-        public ScheduleRecord GetScheduleRecordByTimeAndDate(TimeSpan start, string date)
+        public ScheduleRecord GetScheduleRecordByTimeAndDate(TimeSpan start, string dateWeek, int week, int teacherID)
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            var records = db.ScheduleRecords.ToList();
-            var result = records.FirstOrDefault(sr => sr.StartTime.Equals(start) && sr.Date.HasValue && sr.Date.Value.DayOfWeek.ToString() == date);
+
+            // Find the smallest date for the teacherID
+            var minDate = db.ScheduleRecords
+                .Where(sr => sr.TeacherId == teacherID)
+                .Min(sr => sr.Date);
+
+            if (minDate == null)
+            {
+                // Handle the case where there are no records for the specified teacherID
+                return null;
+            }
+
+            // Calculate the starting date for the given week
+            DateTime startDate = minDate.Value.Date.AddDays(week * 7);
+
+            // Calculate the ending date for the given week
+            DateTime endDate = startDate.AddDays(6); // Assuming a week has 7 days
+
+            // Retrieve the ScheduleRecords for the specified teacherID and within the calculated date range
+            var records = db.ScheduleRecords
+                .Where(sr => sr.TeacherId == teacherID && sr.Date >= startDate && sr.Date <= endDate)
+                .ToList();
+
+            // Find the record that matches the start time and day of the week
+            var result = records.FirstOrDefault(sr => sr.StartTime == start
+                && sr.Date.Value.DayOfWeek.ToString() == dateWeek);
 
             return result;
         }
+
 
         public ScheduleRecord checkExist(string room, TimeSpan start, DateTime date)
         {
@@ -52,7 +77,7 @@ namespace DataAccess
         public List<ScheduleRecord> GetAllScheduleRecords()
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            return db.ScheduleRecords.ToList();
+            return db.ScheduleRecords.Include(scheduleRecord => scheduleRecord.Teacher).ToList();
         }
 
         public void AddScheduleRecord(ScheduleRecord scheduleRecord)

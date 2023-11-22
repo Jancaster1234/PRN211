@@ -36,7 +36,7 @@ namespace DataAccess
         public List<PasscodeRequest> GetAllPasscodeRequests()
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            return db.PasscodeRequests.ToList();
+            return db.PasscodeRequests.Include(p => p.Slot).Include(p => p.Student).ToList();
         }
 
         public void AddPasscodeRequest(PasscodeRequest passcodeRequest)
@@ -58,6 +58,46 @@ namespace DataAccess
             using var db = new FptuPrn211MeetMyLecturerContext();
             db.PasscodeRequests.Remove(passcodeRequest);
             db.SaveChanges();
+        }
+        public List<PasscodeRequest> FilterPasscodeRequests(int? studentId, DateTime? startCreatedDate, DateTime? endCreatedDate, string? status, DateTime? startReviewedDate, DateTime? endReviewedDate, int? slotId)
+        {
+            using (var db = new FptuPrn211MeetMyLecturerContext())
+            {
+                var query = db.PasscodeRequests.Include(p => p.Slot).Include(p => p.Student).AsQueryable();
+
+                if (studentId.HasValue && studentId > 0)
+                {
+                    query = query.Where(ac => ac.StudentId == studentId);
+                }
+                if (startCreatedDate != null)
+                {
+                    query = query.Where(ac => ac.CreatedDate >= startCreatedDate);
+                }
+                if (endCreatedDate != null)
+                {
+                    query = query.Where(ac => ac.CreatedDate <= endCreatedDate);
+                }
+                if (!string.IsNullOrEmpty(status))
+                {
+                    query = query.Where(ac => ac.Status == status);
+                }
+                if (slotId.HasValue && slotId > 0)
+                {
+                    query = query.Where(ac => ac.SlotId == slotId);
+                }
+                if (startReviewedDate != null)
+                {
+                    query = query.Where(ac => ac.ReviewedDate >= startReviewedDate);
+                }
+                if (endReviewedDate != null)
+                {
+                    query = query.Where(ac => ac.ReviewedDate <= endReviewedDate);
+                }
+                // Execute the query and return the filtered users as a list
+                List<PasscodeRequest> filteredPasscodeRequests = query.ToList();
+
+                return filteredPasscodeRequests;
+            }
         }
     }
 }

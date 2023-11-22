@@ -7,8 +7,15 @@ namespace Repository
         User CheckLogin(string email, string password);
         List<User> GetUsers();
         User GetUser(int id);
+        User GetUserByEmail(string email);
         void SaveUser(User user);
         void DeleteUser(User user);
         void UpdateUser(User user);
+        void UpdateUserImage(User user, string imageName);
+        List<User> FilterUsers(string? role, string? email, string? major, string? name);
+
+        void ChangeIsShowProfile(User user, bool status);
+
+        void ChangeIsShowSchedule(User user, bool status);
     }
 }

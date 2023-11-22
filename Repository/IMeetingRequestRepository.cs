@@ -11,5 +11,6 @@ namespace Repository
         void AddMeetingRequest(MeetingRequest meetingRequest);
         void UpdateMeetingRequest(MeetingRequest meetingRequest);
         void DeleteMeetingRequest(MeetingRequest meetingRequest);
+        List<MeetingRequest> FilterMeetingRequests(int? userId, int? teacherId, DateTime? startCreatedDate, DateTime? endCreatedDate, string? status, DateTime? startReviewedDate, DateTime? endReviewedDate, int? slotId);
     }
 }

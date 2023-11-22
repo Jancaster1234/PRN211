@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using BusinessObject.Models;
+using System.Xml.Linq;
 
 namespace DataAccess
 {
@@ -36,7 +37,7 @@ namespace DataAccess
         public List<ActionRecord> GetAllActionRecords()
         {
             using var db = new FptuPrn211MeetMyLecturerContext();
-            return db.ActionRecords.ToList();
+            return db.ActionRecords.Include(a => a.User).ToList();
         }
 
         public void AddActionRecord(ActionRecord actionRecord)
@@ -58,6 +59,22 @@ namespace DataAccess
             using var db = new FptuPrn211MeetMyLecturerContext();
             db.ActionRecords.Remove(actionRecord);
             db.SaveChanges();
+        }
+        public List<ActionRecord> FilterActionRecords(int? userId)
+        {
+            using (var db = new FptuPrn211MeetMyLecturerContext())
+            {
+                var query = db.ActionRecords.Include(a => a.User).AsQueryable();
+
+                if (userId.HasValue && userId > 0)
+                {
+                    query = query.Where(ac => ac.User.Id == userId);
+                }
+
+                List<ActionRecord> filteredActionRecords = query.ToList();
+
+                return filteredActionRecords;
+            }
         }
     }
 }
